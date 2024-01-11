@@ -1,4 +1,9 @@
 How to represent complexity ?
+what is Asymptotic Notation ? 
+- Asymptotic Notations are mathematical tools that allow you to analyze an algorithm’s running time by identifying its behavior as its input size grows.
+- .This is also referred to as an algorithm’s growth rate.
+
+
 Asymptotic notations(3 notations)
 
 1.Big-O Notation(O-notation) - worst case complexity
@@ -7,6 +12,14 @@ Big O Notation :- Use to denote complexity(space and time)
 3.Theta Notation :-(θ-notation) - Average case complexity
 
 Big-O Notation(O- notation)
+- Big-O notation represents the upper bound of the running time of an algorithm. Therefore, it gives the worst-case complexity of an algorithm.
+- .It is the most widely used notation for Asymptotic analysis.
+- .It specifies the upper bound of a function.
+- .The maximum time required by an algorithm or the worst-case time complexity.
+- .It returns the highest possible output value(big-O) for a given input.
+- .Big-Oh(Worst Case) It is defined as the condition that allows an algorithm to complete statement execution in the longest amount of time possible.
+-If f(n) describes the running time of an algorithm, f(n) is O(g(n)) if there exist a positive constant C and n0 such that, 0 ≤ f(n) ≤ cg(n) for all n ≥ n0
+-It returns the highest possible output value (big-O)for a given input.
 
 - The worst case complexity of an algo is represented using the Big-O-Notation
 - Big-O-Notation describe the complexity of an algo using algebraic terms
@@ -14,6 +27,9 @@ Big-O Notation(O- notation)
     - it is expressed in terms of the input
     - it focuses on the bigger picture without getting caughtt up in the minute details
 
+Mathematical Representation of Big-O Notation:
+
+O(g(n)) = { f(n): there exist positive constants c and n0 such that 0 ≤ f(n) ≤ cg(n) for all n ≥ n0 }
 
 Big-O Time complexity :-
 
@@ -110,6 +126,44 @@ Notes :-
         -the same algo with the same programming lang can be implement in diff way.
         -when writing programs at work, don't lose sight of the big picture, rather than writing cleaver code,writing code that is simple to read and maintain.
 
------------------------------------------
-    
-Asymptotic analysis and notation :-
+
+2. Omega Notation (Ω-Notation):-
+- Omega notation represents the lower bound of the running time of an algorithm. Thus, it provides the best case complexity of an algorithm.
+- The execution time serves as a lower bound on the algorithm’s time complexity.
+-It is defined as the condition that allows an algorithm to complete statement execution in the shortest amount of time.
+
+Mathematical Representation of Omega notation :
+-Ω(g(n)) = { f(n): there exist positive constants c and n0 such that 0 ≤ cg(n) ≤ f(n) for all n ≥ n0 }
+
+
+3. Theta Notation (Θ-Notation): Average
+- Theta notation encloses the function from above and below. Since it represents the upper and the lower bound of the running time of an algorithm, it is used for analyzing the average-case complexity of an algorithm.
+
+Mathematical Representation of Theta notation:
+Θ (g(n)) = {f(n): there exist positive constants c1, c2 and n0 such that 0 ≤ c1 * g(n) ≤ f(n) ≤ c2 * g(n) for all n ≥ n0}
+
+Note: Θ(g) is a set
+
+Properties of Asymptotic Notations: 
+1. General Properties:
+If f(n) is O(g(n)) then a*f(n) is also O(g(n)), where a is a constant.
+
+2. Transitive Properties:
+If f(n) is O(g(n)) and g(n) is O(h(n)) then f(n) = O(h(n)).
+
+3. Reflexive Properties: 
+Reflexive properties are always easy to understand after transitive.
+If f(n) is given then f(n) is O(f(n)). Since MAXIMUM VALUE OF f(n) will be f(n) ITSELF!
+Hence x = f(n) and y = O(f(n) tie themselves in reflexive relation always.
+
+4. Symmetric Properties: 
+If f(n) is Θ(g(n)) then g(n) is Θ(f(n)).
+
+5. Transpose Symmetric Properties:
+If f(n) is O(g(n)) then g(n) is Ω (f(n)).
+
+6. Some More Properties: 
+1. If f(n) = O(g(n)) and f(n) = Ω(g(n)) then f(n) = Θ(g(n))
+2. If f(n) = O(g(n)) and d(n)=O(e(n)) then f(n) + d(n) = O( max( g(n), e(n) )) 
+3. If f(n)=O(g(n)) and d(n)=O(e(n)) then f(n) * d(n) = O( g(n) * e(n))
+
