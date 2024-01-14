@@ -1,0 +1,120 @@
+Recursion :-
+-that is, function calling itself again and again until it doesn’t have left with it anymore.
+-We may think of recursion (informally) as like running on a racing track again and again but each time the laps getting smaller and smaller.
+-As we have seen that recursion is function keep calling itself again and again and eventually gets stopped at its own, but we may also realize a fact that a function doesn’t stop itself.
+-Therefore to make function stop at some time, we provide something calling Base Case, which lets any function realize that “Yes, its time to get terminated!”.
+-After giving the base case condition, we implement the recursion part in which we call function again as per the required result.
+Eg:-“Fibonacci Series”, “Longest Common Subsequence”, “Palindrome Check” and so on.
+
+-We may also think recursion in the form of loop in which for every user passed parameter function gets called again and again and hence produces its output as per the need,
+
+
+Eg 1 :- number decrement counter
+
+let decrementCouter = (number) => {
+    if(number === 0) return;
+    console.log(number);
+    decrementCounter(number - 1)
+}
+
+decrementCounter(5)
+
+Output :-
+5
+4
+3
+2
+1
+
+Example 2: In this example, we will be developing a code that will help us to check whether the integer we have passed is Even or Odd. By continuously subtracting 2 from a number, the result would be either 0 or 1. So if it is 0 then our number is Even otherwise it is Odd.
+
+let checkNumber = (number) => {
+    if(number === 0) return (number + " Is even)
+    if(number === 1) return (number + " Is odd);
+    return checkNumber(number - 2)
+}
+
+console.log(checkNumber(5))
+
+Output :-
+1 is odd
+
+
+
+
+Recursion is data str 
+eg: - array , stack, queue, linked list
+
+
+Re-Cursion :-
+jo function khud ko bar bar call karta hai
+- is all about condition
+
+
+function apple() {
+    console.log("Hello")
+}
+
+apple() //calling function
+
+function apple() {
+    console.log("Hello")
+    apple()
+}
+
+apple() //this code makes infinite loops
+
+
+function apple(x) {
+  console.log(x);
+  if (x < 10) {
+    apple(x+1);
+  }
+}
+
+let data = 0;
+apple(data);
+
+1 to 10
+
+
+<!-- How to fing factorial without loops -->
+we can use recursion
+5*4*3*2*1 = 120
+
+// This is a recursive function to calculate the factorial of a given number.
+
+// Function definition for factorial
+function factorial(item) {
+    // Base case: if the input is 0, the factorial is 1
+    if (item == 0) {
+        return 1;
+    }
+    
+    // Recursive case: calculate factorial using the formula n! = n * (n-1)!
+    return item * factorial(item - 1);
+}
+
+// Example usage:
+// Setting the value of 'data' to 5
+let data = 5;
+
+// Calling the factorial function with 'data' as an argument and logging the result
+console.log(factorial(data));
+
+
+
+-USING WHILE LOOP
+
+
+let data = ['batman', 'iron','man', 'spider','man','vision']
+
+let i  = 0;
+
+while(i < data.length) {
+    console.log(data[i])
+    i++
+}
+
+
+
