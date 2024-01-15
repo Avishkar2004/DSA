@@ -1,9 +1,20 @@
-let checkNumber = (number) => {
-  if (number === 0) return number + " is even";
-  if (number === 1) return number + " is odd";
-  return checkNumber(number - 2);
-};
+let money = 100;
+let totalapple = 0;
 
-console.log(checkNumber(5));
-console.log(checkNumber(10));
-console.log(checkNumber(1300));
+function buyApple(x) {
+  // console.log(x);
+  if (x > 0) {
+    console.log("I Have", x, "RS", totalapple);
+    buyMore(x);
+  } else {
+    console.log("I dont have more money", totalapple);
+  }
+}
+
+function buyMore(x) {
+  totalapple++;
+  buyApple(x - 20);
+  // console.log("Buy More", x);
+}
+
+buyApple(money);
