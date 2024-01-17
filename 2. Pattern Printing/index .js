@@ -1,78 +1,31 @@
-// for (let i = 0; i <= 4; i++) {
-//   for (let j = 1; j <= i; j++) {
-//     console.log(i + " ");
-//   }
-// }
+let data = [3, 7, 12, 34, 56, 90];
+let data2 = [4, 9, 29, 45];
+let data3 = [];
 
-//  a)   1
-//      2 2
-//      3 3 3
-//      4 4 4 4
+// pointer for interation throught array
 
-// for (let i = 0; i <= 4; i++) {
-//     for (let j = 1; j <= i; j++) {
-//       console.log(j + " ");
-//     }
-//   }
+let d1 = 0;
+let d2 = 0;
+let d3 = 0;
 
-// b)   1
-//      1 2
-//      1 2 3
-//      1 2 3 4
+while (d1 < data.length && d2 < data2.length) {
+  if (data[d1] < data2[d2]) {
+    data3[d3] = data[d1];
+    d1++;
+  } else {
+    data3[d3] = data2[d2];
+    d2++;
+  }
+  d3++;
+}
 
-// let count = 1;
-// for (let i = 0; i <= 4; i++) {
-//   for (let j = 1; j <= i; j++) {
-//     console.log(count + " ");
-//     count++;
-//   }
-// }
+console.log(d1);
 
-//c)    1
-//      2 3
-//      4 5 6
-//      7 8 9 10
+while (d1 < data.length) {
+  data3[d3] = data[d1];
+  d1++;
+  d3++;
+}
 
-
-// for(let i= 1; i<= 4; i++) {
-//     for(let j = 4; j >= i; j--) {
-//         document.write("&nbsp;")
-//     }
-//      for(let k = 1; k <=i ; k++) {
-//         document.write(i + " ")
-//      }
-// }
-
-
-// for(let i= 1; i<= 4; i++) {
-//     for(let j = 4; j >= i; j--) {
-//         document.write("&nbsp;")
-//     }
-//      for(let k = 1; k <=i ; k++) {
-//         document.write(i + " ")
-//      }
-// }
-
-
-// e) 1
-//      1 2 
-//      1 2 3 
-//      1 2 3 4 
-
-
-
-let count = 1;
-for(let i= 1; i<= 4; i++) {
-        for(let j = 4; j >= i; j--) {
-            document.write("&nbsp;")
-        }
-         for(let k = 1; k <=i ; k++) {
-            document.write(count + " ")
-            count++
-         }
-    }
-
-    // f) 1
-    // 2 3 
-    // 4 5 6 
-    // 7 8 9 10
+console.log(d1);
+console.log(data3);

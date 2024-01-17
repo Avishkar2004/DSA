@@ -154,7 +154,7 @@ If f(n) is O(g(n)) and g(n) is O(h(n)) then f(n) = O(h(n)).
 3. Reflexive Properties: 
 Reflexive properties are always easy to understand after transitive.
 If f(n) is given then f(n) is O(f(n)). Since MAXIMUM VALUE OF f(n) will be f(n) ITSELF!
-Hence x = f(n) and y = O(f(n) tie themselves in reflexive relation always.
+Hence x = f(n) and y = O(f(n)) tie themselves in reflexive relation always.
 
 4. Symmetric Properties: 
 If f(n) is Θ(g(n)) then g(n) is Θ(f(n)).
