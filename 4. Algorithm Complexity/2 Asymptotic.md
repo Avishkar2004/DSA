@@ -17,7 +17,7 @@ Big-O Notation(O- notation)
 - .It specifies the upper bound of a function.
 - .The maximum time required by an algorithm or the worst-case time complexity.
 - .It returns the highest possible output value(big-O) for a given input.
-- .Big-Oh(Worst Case) It is defined as the condition that allows an algorithm to complete statement execution in the longest amount of time possible.
+- .Big-O(Worst Case) It is defined as the condition that allows an algorithm to complete statement execution in the longest amount of time possible.
 -If f(n) describes the running time of an algorithm, f(n) is O(g(n)) if there exist a positive constant C and n0 such that, 0 ≤ f(n) ≤ cg(n) for all n ≥ n0
 -It returns the highest possible output value (big-O)for a given input.
 
@@ -107,7 +107,7 @@ for(i = 1; i<=n; i++) {
     }
 }
 
-Time complexity :- O(³)
+Time complexity :- O(n³)
 
 if the input size reduces by half every iteration 
  
