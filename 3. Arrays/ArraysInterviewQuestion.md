@@ -242,4 +242,158 @@ console.log(newNumber)
 Output :-
 4
 
+<!-- Find Index -->
+const index = numbers.findIndex((item) => item === 2)
+console.log(index)
+Output :-
+2
+
+
 <!-- Speard and rest operator -->
+
+const nums = [1,2,3]
+const nums2 = [4,5,6,7]
+const ans =  [...nums, ...nums2]
+
+console.log(ans)
+
+output :-
+[
+  1, 2, 3, 4,
+  5, 6, 7
+]
+
+
+<!-- rest operator -->
+
+const nums = [1,2,3]
+const nums2 = [4,5,6,7]
+<!-- this is the rest operator -->
+function sum(...numbers) {
+  return numbers;
+}
+
+console.log(sum(nums, nums2))
+
+output :-
+[ 1, 2, 3, [ 4, 5, 6, 7 ] ]
+
+<!-- slice :- access certain array-->
+Returns a copy of a section of an array. For both start and end, a negative index can be used to indicate an offset from the end of the array. For example, -2 refers to the second to last element of the array.
+
+
+let data = ["Hi","no", "Yes"]
+
+data.slice()
+console.log(data) //[ 'Hi' ]
+
+<!-- Splice -->
+
+Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+
+@param start — The zero-based location in the array from which to start removing elements.
+
+@param deleteCount — The number of elements to remove.
+
+@param items — Elements to insert into the array in place of the deleted elements.
+
+@returns — An array containing the elements that were deleted.
+
+let data = ["Hi","no", "Yes"]
+
+const ans  = data.splice(1,2,"jyoti")
+console.log(ans) //[ 'no', 'Yes' ]
+
+
+<!-- Fill Function -->
+Changes all array elements from start to end index to a static value and returns the modified array
+
+@param value — value to fill array section with
+
+@param start
+index to start filling the array at. If start is negative, it is treated as length+start where length is the length of the array.
+
+@param end
+index to stop filling the array at. If end is negative, it is treated as length+end.
+
+
+let data = [1,3,8,4,3]
+data.fill(1) //1,1,1,1,1
+data.fill(2,2) //2,2,8,4,3
+console.log(data)
+
+<!-- flat -->
+const numbers = [1,[2,3],[[4,5], 6]]
+const flattenArray = flatEx.flat(2) //we can pass depth
+
+console.log(flattenArray) //[ 1, 2, 3, 4, 5, 6 ]
+
+<!-- reverse -->
+
+let data = [1,3,8,4,3]
+data.reverse()
+conosole.log(data) //[ 3, 4, 8, 3, 1 ]
+
+
+<!-- Sort -->
+
+const unsoreted = [5,32,55,23,1,0]
+unsoreted.sort((a,b) => a - b ) //[ 0, 1, 5, 23, 32, 55 ]
+unsoreted.sort((a,b) => b - a ) //[ 55, 32, 23, 5, 1, 0 ]
+console.log(unsoreted)
+
+
+<!-- Interview Question -->
+
+Q1.second largest number
+given an array of size N, print second largest
+distinct element from an array
+
+input = [12,35,,1,10,34, 1] ---> Output :- 34
+input = [10,5,10] ---> output:5
+
+1 Approach
+function secondLargest(arr) {
+  const uniqeArr = Array.from(new Set(arr)); //Creates an array from an iterable object.
+  uniqeArr.sort((a, b) => {
+    return b - a;
+  });
+  if (uniqeArr.length >= 2) {
+    return uniqeArr[1];
+  } else {
+    return -1;
+  }
+}
+
+console.log(secondLargest([10,5,10]))
+
+
+2 Approach
+
+// input = [12,35,,1,10,34, 1] => 34
+// input = [10,5,10]  => 5
+
+[12, 35 , 1, 10, 34, 1];
+
+function secondLargest(arr) {
+  let largest = Number.NEGATIVE_INFINITY;
+  let secondLargest = Number.NEGATIVE_INFINITY;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+        secondLargest = largest;
+      largest = arr[i];
+    } else if(arr[i] != largest && arr[i] > secondLargest){
+        secondLargest= arr[i]
+    }
+  }
+  return secondLargest
+}
+
+
+console.log(secondLargest([12, 35 , 1, 10, 34, 1]));
+
+// Time COmplexity :- O(n);
+// Space Complexity :- O(1);
+
+
+<!-- Rotate array by k -->
