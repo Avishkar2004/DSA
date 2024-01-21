@@ -29,4 +29,15 @@ function gotoLunch(person) {
 
 console.log("outcome: ",gotoLunch(1))
 
-console.log(m)
+1
+2
+3
+4
+outcome:  true
+
+
+why do we need recursion :-
+tree, graph reversal, sorting, wide and conqurer, backtracking, dynamic programming.
+
+
+Loops vs recursion:-
