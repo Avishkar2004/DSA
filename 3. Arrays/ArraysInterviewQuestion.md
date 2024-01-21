@@ -397,3 +397,109 @@ console.log(secondLargest([12, 35 , 1, 10, 34, 1]));
 
 
 <!-- Rotate array by k -->
+given the interger array nums , rotate the array to the right by k steps when k is non-negative
+
+nums=[1,2,3,4,5,6,7] k = 3  ==>[5,6,7,1,2,3,4]
+nums=[-1,-100,3,99] k = 2 ==>[3,99.-1,-100]
+
+[1,2,3,4,5,6,7] => [7,1,2,3,4,5,6] => [6,7,1,2,3,4,5] => [5,6,7,1,2,3,4]
+
+function rotateArray (nums, k) {
+    let size = nums.length;
+    if(size > k) {
+      k = k % size
+    }
+    const rotated = nums.splice(size - k, size) //8 - 5  =3
+    nums.unshift(...rotated)
+    return nums
+}
+
+console.log(rotateArray([1,2,3,4,5,6,7], 3))
+
+Output :-
+[
+  5, 6, 7, 1,
+  2, 3, 4
+]
+
+Time comp :- O(n)
+
+
+
+
+
+
+
+function rotateArrayOptimize(nums, k) {
+  let size = nums.length;
+  if (size > k) {
+    k = k % size;
+  }
+  reverse(nums, 0, nums.length - 1);  // O(n)
+  reverse(nums, 0, k - 1);            //O(k)
+  reverse(nums, k, nums.length - 1);  //O(n - k)
+  return nums;
+  //can reverse this
+  // [1,2,3,4,5,6,7] => [7,6,5,1,2,3,4] => [5,6,7,4,3,2,1] => [5,6,7,1,2,3,4]
+}
+
+Time comp = O(n)
+Space comp = O(1)
+
+function reverse(nums, left, right) {
+  while (left < right) {
+    const temp = nums[left];
+    nums[left++] = nums[right];
+    nums[right--] = temp;
+  }
+}
+
+
+console.log(rotateArrayOptimize([-1,-100,3,99], 2))
+
+
+
+
+// Ques 3 - Remove Duplicates from Sorted Array
+// Given an integer array nums sorted in non-decreasing order, remove
+// the duplicates in-place such that each unique element appears
+// only once.The relative order of the elements should be kept
+// the same.Then return the number of unique elements in nums.
+
+// Input: [1,1,2]               ----->>>>>  Output: 2, [1,2,_]
+// Input: [0,0,1,1,1,2,2,3,3,4] ----->>>>>  Output: 5, [0,1,2,3,4,_,_,_,_,_]
+
+function removeDuplicates(nums) {
+  for (let i = 0; i < nums.length; i++) {
+    //O(n) time comp
+    if (nums[i] === nums[i + 1]) {
+      nums.splice(i + 1, 1); //O(1) time comp
+      i--;
+    }
+  }
+  return nums.length;
+}
+
+// Time comp = O(n)
+// space comp = O(1)
+
+console.log(removeDuplicates([1,1,2])); //2
+
+// Without js method
+
+function removeDuplicatesNew(nums) {
+  if (nums.length === 0) return 0;
+  let i = 0;
+
+  for (let j = 1; j < nums.length; j++) {
+    if (nums[i] !== nums[j]) {
+      i++;
+      nums[i] = nums[j];
+    }
+  }
+  return i + 1;
+}
+
+
+console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4])) //5
+console.log(removeDuplicates([1,1,2] )) //2
