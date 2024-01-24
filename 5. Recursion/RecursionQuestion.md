@@ -195,3 +195,34 @@ The solution set must not contain duplicate subsets. Return the solution in any 
 Input: [1,2,3]  ----->>>>>  Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 Input: [0]      ----->>>>>  Output: [[],[0]]
 
+
+function subset(nums) {
+  let result = [];
+  let temp = [];
+
+  function recursiveSubset(nums, i) {
+    if (i === nums.length) {
+      return result.push([...temp]);
+    }
+
+    temp.push(nums[i]);
+    recursiveSubset(nums, i + 1);
+    temp.pop();
+    recursiveSubset(nums, i + 1);
+  }
+
+  recursiveSubset(nums, 0);
+  return result;
+}
+
+console.log(subset([1, 2, 3]));
+
+
+
+Output:-
+[
+  [ 1, 2, 3 ], [ 1, 2 ],
+  [ 1, 3 ],    [ 1 ],
+  [ 2, 3 ],    [ 2 ],
+  [ 3 ],       []
+]
