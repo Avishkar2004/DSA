@@ -35,10 +35,10 @@ console.log(arr.length)
 
 
 // ADD AND REMOVE ELEMENT FROM AN ARRAY
-push and pop is most commonaly used method when it comest adding or removing element at the end of the element
+push and pop is most commonaly used method when it comes to adding or removing element at the end of the array
 
 
-shift and unshift is most commonaly used method when it comest adding or removing element at the starting of the element
+shift and unshift is most commonaly used method when it comest adding or removing element at the starting of the array
 
 <!-- Push method  -->
 let person = {
@@ -160,7 +160,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 @param callbackfn — A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
 
-@param thisArg — An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+@param thisArg — An object to which the this keyword can refer in the callbackfn function. If this Arg is omitted, undefined is used as the this value.
 
 
 const numbers =   [1,2,3,4,5]
@@ -178,7 +178,7 @@ Output :- [ 5, 6, 7, 8, 9 ]
 
 const numbers =   [1,2,3,4,5]
 
-// filter takes condition inside it and return only those element satisf this condition
+// filter takes condition inside it and return only those element satisfy this condition
 const newNumber = numbers.filter((item, index, arrays) => {
 return item > 3
 })
@@ -192,7 +192,7 @@ Output :-
 const numbers =   [1,2,3,4,5]
 
 // accumulator :- previous value
-// reduct :- takes an array and reduces by down in just one value
+// reduce :- takes an array and reduces by down in just one value
 const newNumber = numbers.reduce((prev, item) => {
 return prev + item
 }, 0)
@@ -205,7 +205,7 @@ Output :-
 
 const numbers =   [1,2,3,4,5]
 
-// Sum :- if satisfies the condition then return every single item 
+// some :- if satisfies the condition then return every single item 
 // return true of false
 const newNumber = numbers.some((item, index,array) => {
 return item > 3
@@ -220,7 +220,7 @@ true
 
 const numbers =   [1,2,3,4,5]
 
-// every check for every single element in array if the condition satisfies then return every single element
+// every:- check for every single element in array if the condition satisfies then return every single element
 const newNumber = numbers.every((item, index,array) => {
 return item > 0
 })
@@ -243,6 +243,11 @@ Output :-
 4
 
 <!-- Find Index -->
+Returns the index of the first element in the array where predicate is true, and -1 otherwise.
+
+@param predicate
+find calls predicate once for each element of the array, in ascending order, until it finds one where predicate returns true. If such an element is found, findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+
 const index = numbers.findIndex((item) => item === 2)
 console.log(index)
 Output :-
@@ -392,7 +397,7 @@ function secondLargest(arr) {
 
 console.log(secondLargest([12, 35 , 1, 10, 34, 1]));
 
-// Time COmplexity :- O(n);
+// Time Complexity :- O(n);
 // Space Complexity :- O(1);
 
 
@@ -426,10 +431,7 @@ Time comp :- O(n)
 
 
 
-
-
-
-
+2.
 function rotateArrayOptimize(nums, k) {
   let size = nums.length;
   if (size > k) {
