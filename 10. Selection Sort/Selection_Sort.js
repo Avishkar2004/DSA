@@ -1,6 +1,8 @@
-let items = [20, 12, 53, 3,8,760];
+//This is ascending order
+let items = [20, 12, 53, 3, 8, 760];
 function SelectionSort(data) {
   //! console.log(data); [ 20, 12, 53, 3 ]
+  let minId;
   for (let i = 0; i < data.length; i++) {
     minId = i;
     for (let j = i; j < data.length; j++) {
@@ -8,7 +10,7 @@ function SelectionSort(data) {
         minId = j;
       }
     }
-    //! isko mahe swap karna padega
+    //! isko hame swap karna padega
     let temp = data[minId];
     data[minId] = data[i];
     data[i] = temp;
