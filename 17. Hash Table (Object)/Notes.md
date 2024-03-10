@@ -1,5 +1,7 @@
 ek se jyada object store karane ho to array banana padega.
 
+- A HashMap is a data structure in JavaScript that allows you to store key-value pairs. It provides fast access to values based on their keys and is commonly used to optimize lookup operations.
+
 How to Use Hash Tables with Object and Map Classes in JavaScript
 -The most common example of a Hash Table in JavaScript is the Object data type, where you can pair the object's property value with a property key.
 
