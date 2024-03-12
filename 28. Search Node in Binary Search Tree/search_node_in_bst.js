@@ -60,7 +60,8 @@ bst.makeTree(5);
 bst.makeTree(30);
 bst.makeTree(40);
 bst.makeTree(23);
-console.log(bst.search(bst.root, 30));
+console.log(bst.search(bst.root, 30)); // true
+console.log(bst.search(bst.root, 12)); // false
 
 console.log(bst);
 // console.log(bst.isTreeEmpty());
