@@ -76,6 +76,21 @@ class BSTree {
       console.log(root.value);
     }
   }
+  //! Breadth First Search Traversing in Binary Search Tree
+  bfsTraversing() {
+    let queue = [];
+    queue.push(this.root);
+    while (queue.length) {
+      let current = queue.shift();
+      if (current.left) {
+        queue.push(current.left);
+      }
+      if (current.right) {
+        queue.push(current.right);
+      }
+      console.log(current.value);
+    }
+  }
 }
 
 //! This is how we invoked Tree
@@ -83,10 +98,12 @@ let bst = new BSTree();
 bst.makeTree(20);
 bst.makeTree(10);
 bst.makeTree(5);
+bst.makeTree(11);
 bst.makeTree(30);
 bst.makeTree(40);
 bst.makeTree(23);
 
 // bst.preOrder(bst.root);
 // bst.InOrder(bst.root);
-bst.postOrder(bst.root);
+// bst.postOrder(bst.root);
+bst.bfsTraversing(); // 20,10,30,5,11,23,40
