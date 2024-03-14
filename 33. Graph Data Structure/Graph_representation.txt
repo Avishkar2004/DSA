@@ -1,0 +1,83 @@
+A graph is a data structure that consist a sets of vertices (called nodes) and edges. There are two ways to store Graphs into the computer's memory:
+
+1. Sequential representation (or, Adjacency matrix representation)
+2. Linked list representation (or, Adjacency list representation)
+
+In sequential representation, an adjacency matrix is used to store the graph. Whereas in linked list representation, there is a use of an adjacency list to store the graph.
+
+In this tutorial, we will discuss each one of them in detail.
+
+Sequential representation
+In sequential representation, there is a use of an adjacency matrix to represent the mapping between vertices and edges of the graph. We can use an adjacency matrix to represent the undirected graph, directed graph, weighted directed graph, and weighted undirected graph.
+
+If adj[i][j] = w, it means that there is an edge exists from vertex i to vertex j with weight w.
+
+An entry Aij in the adjacency matrix representation of an undirected graph G will be 1 if an edge exists between Vi and Vj. If an Undirected Graph G consists of n vertices, then the adjacency matrix for that graph is n x n, and the matrix A = [aij] can be defined as -
+
+aij = 1 {if there is a path exists from Vi to Vj}
+
+aij = 0 {Otherwise}
+
+It means that, in an adjacency matrix, 0 represents that there is no association exists between the nodes, whereas 1 represents the existence of a path between two edges.
+
+If there is no self-loop present in the graph, it means that the diagonal entries of the adjacency matrix will be 0.
+
+Now, let's see the adjacency matrix representation of an undirected graph.
+
+3 photo
+
+In the above figure, an image shows the mapping among the vertices (A, B, C, D, E), and this mapping is represented by using the adjacency matrix.
+
+There exist different adjacency matrices for the directed and undirected graph. In a directed graph, an entry Aij will be 1 only when there is an edge directed from Vi to Vj.
+
+Adjacency matrix for a directed graph :- 
+
+In a directed graph, edges represent a specific path from one vertex to another vertex. Suppose a path exists from vertex A to another vertex B; it means that node A is the initial node, while node B is the terminal node.
+
+Consider the below-directed graph and try to construct the adjacency matrix of it.
+
+4 photo
+
+In the above graph, we can see there is no self-loop, so the diagonal entries of the adjacent matrix are 0.
+
+Adjacency matrix for a weighted directed graph
+
+It is similar to an adjacency matrix representation of a directed graph except that instead of using the '1' for the existence of a path, here we have to use the weight associated with the edge. The weights on the graph edges will be represented as the entries of the adjacency matrix. We can understand it with the help of an example. Consider the below graph and its adjacency matrix representation. In the representation, we can see that the weight associated with the edges is represented as the entries in the adjacency matrix.
+
+5 photo
+
+
+In the above image, we can see that the adjacency matrix representation of the weighted directed graph is different from other representations. It is because, in this representation, the non-zero values are replaced by the actual weight assigned to the edges.
+
+Adjacency matrix is easier to implement and follow. An adjacency matrix can be used when the graph is dense and a number of edges are large.
+
+Though, it is advantageous to use an adjacency matrix, but it consumes more space. Even if the graph is sparse, the matrix still consumes the same space.
+
+Linked list representation :-
+
+An adjacency list is used in the linked representation to store the Graph in the computer's memory. It is efficient in terms of storage as we only have to store the values for edges.
+
+Let's see the adjacency list representation of an undirected graph.
+
+6 photo
+
+In the above figure, we can see that there is a linked list or adjacency list for every node of the graph. From vertex A, there are paths to vertex B and vertex D. These nodes are linked to nodes A in the given adjacency list.
+
+An adjacency list is maintained for each node present in the graph, which stores the node value and a pointer to the next adjacent node to the respective node. If all the adjacent nodes are traversed, then store the NULL in the pointer field of the last node of the list.
+
+The sum of the lengths of adjacency lists is equal to twice the number of edges present in an undirected graph.
+
+Now, consider the directed graph, and let's see the adjacency list representation of that graph.
+
+7 photo :-
+
+For a directed graph, the sum of the lengths of adjacency lists is equal to the number of edges present in the graph.
+
+Now, consider the weighted directed graph, and let's see the adjacency list representation of that graph.
+
+8 photo
+
+In the case of a weighted directed graph, each node contains an extra field that is called the weight of the node.
+
+In an adjacency list, it is easy to add a vertex. Because of using the linked list, it also saves space.
+

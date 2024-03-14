@@ -62,3 +62,4 @@ If two nodes u and v are connected via an edge e, then the nodes u and v are cal
 
 Degree of the Node
 A degree of a node is the number of edges that are connected with that node. A node with degree 0 is called as isolated node.
+
