@@ -1,0 +1,18 @@
+Adjacency List in Graph :-
+
+A se kis kis se connected
+
+A = [B, C]
+B = [A,C,D]
+C = [A, B]
+D = [B]
+
+
+let adjList = {
+  "a": ["b", "c"],
+  "b": ["a", "c", "d"],
+  "c": ["a", "b"],
+  "d": ["b"],
+};
+
+console.log(adjList.c) // c kis kis se conected hai aise check krte hai
