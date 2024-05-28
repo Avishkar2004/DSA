@@ -23,6 +23,7 @@ for(const i of data) {
 console.log(i);
 }
 
+
 3.
 for (let i = 0; i < data.length; i++) {
     console.log(`Arrya ${i} is ${data[i]}`);
@@ -120,6 +121,8 @@ console.log(data)
 using linear search algo
 using loop
 
+1. 
+
 let data = [20,40,60,5,10,70,80,99];
 let search = 70;
 let index = undefined;
@@ -131,10 +134,9 @@ if(data[i] ===search) {
  }
 }
 
-
 console.log(index)
 
-- Search element by default
+-2.  Search element by default :- 
 let data = [20,40,60,5,10,70,80,99];
 let search = 70;
 let index = undefined;
@@ -142,8 +144,9 @@ let index = undefined;
 console.log(data.indexOf(search)) //this return the position
 
 
+6. MERGE TWO ARRAY USING FOR LOOPS(merging) :- 
+1.
 
-6.MERGE TWO ARRAY USING FOR LOOPS(merging)
 let data = [20, 40, 60, 5, 10, 70, 80, 99];
 let data2 = [20, 30, 40, 50];
 let data3 = [];
@@ -160,19 +163,16 @@ console.log(data3)
 6 space comp.
 19 lines time comp.
 
-
-
 2.
+
 let data = [40, 50, 60, 100];
 let data2 = [40, 50, 60, 100];
 
 let data3 = [...data2, ...data]
-
-
 console.log(data3)
 
-7.MERGE TWO ARRAY USING (WHILE LOOPS)
 
+7.MERGE TWO ARRAY USING (WHILE LOOPS)
 - this logic only work on sorted array(both side means left side kadun pan aani right side kadun pan)
 
 // Given arrays
@@ -220,11 +220,16 @@ console.log(data3);
 time comp = 32 lines
 4 line space comp.
 
-
 Space complexity :- how much "memory" it is taking
 
 TIme Complexity :- No.of lines
 - vary on system processor, current program working on our system, depend on system, ram , bytes.
+
+
+REVERSE ARRAY :-
+let dummy = [1,2,3,4]
+dummy.reverse()
+console.log(dummy)
 
 
 8. ARRAY SORTING(Sorting) :-
