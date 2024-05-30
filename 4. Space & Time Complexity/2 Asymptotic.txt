@@ -1,0 +1,169 @@
+How to represent complexity ?
+what is Asymptotic Notation ? 
+- Asymptotic Notations are mathematical tools that allow you to analyze an algorithm’s running time by identifying its behavior as its input size grows.
+- .This is also referred to as an algorithm’s growth rate.
+
+
+Asymptotic notations(3 notations)
+
+1.Big-O Notation(O-notation) - worst case complexity
+Big O Notation :- Use to denote complexity(space and time)
+2.Omega notation :-(Ω-notation) - Best case complexity
+3.Theta Notation :-(θ-notation) - Average case complexity
+
+Big-O Notation(O- notation)
+- Big-O notation represents the upper bound of the running time of an algorithm. Therefore, it gives the worst-case complexity of an algorithm.
+- .It is the most widely used notation for Asymptotic analysis.
+- .It specifies the upper bound of a function.
+- .The maximum time required by an algorithm or the worst-case time complexity.
+- .It returns the highest possible output value(big-O) for a given input.
+- .Big-O(Worst Case) It is defined as the condition that allows an algorithm to complete statement execution in the longest amount of time possible.
+-If f(n) describes the running time of an algorithm, f(n) is O(g(n)) if there exist a positive constant C and n0 such that, 0 ≤ f(n) ≤ cg(n) for all n ≥ n0
+-It returns the highest possible output value (big-O)for a given input.
+
+- The worst case complexity of an algo is represented using the Big-O-Notation
+- Big-O-Notation describe the complexity of an algo using algebraic terms
+-it has 2 imp characterstics :-
+    - it is expressed in terms of the input
+    - it focuses on the bigger picture without getting caughtt up in the minute details
+
+Mathematical Representation of Big-O Notation:
+
+O(g(n)) = { f(n): there exist positive constants c and n0 such that 0 ≤ f(n) ≤ cg(n) for all n ≥ n0 }
+
+Big-O Time complexity :-
+
+function summation(n) {
+    let sum = 0;
+    for(let i = 1; i <=n; i++) {
+        sum += i
+    }
+     return sum;
+}
+
+const ans = summation(4)
+
+console.log(ans)
+
+1 + 2 + 3 + 4 = 10
+
+count the number of times a statement executes based on the input size
+
+function summation(n) {             n = 4 time com is dependent on the input size 4+2
+    let sum = 0;                    1
+    for(let i = 1; i <=n; i++) {
+        sum += i                    4
+    }
+     return sum;                    1
+}
+
+const ans = summation(4)
+
+console.log(ans)
+
+Time Complexity :- O(n) - Linear   
+
+- it focuses on the bigger picture without getting caughtt up in the minute details
+
+n + 2           n
+n = 100     100 + 2
+n= 1000     1000 + 2
+.
+.
+.
+.
+n=10000000  10000000+2
+
+Big-O-Calcn
+
+function sum(n) {
+    return (n * ( n + 1)) / 2;
+}
+
+Time Complextiy :- O(1) - constant
+
+
+2. two nested loop means square(Quadratic)
+
+for(i = 1; i<=n; i++) {
+    for(j = 1; j <=i; j++) {
+        //some code
+    }
+}
+
+Time Complextiy :- O(n²) - Quadratic
+                3n² + 5n + 1
+
+Space complexity: O(1)
+
+
+3. three nested loop means cubic
+
+for(i = 1; i<=n; i++) {
+    for(j = 1; j <=i; j++) {
+        for(k = 1; k <= i; k++) {
+        //some code
+        }
+    }
+}
+
+Time complexity :- O(n³)
+
+if the input size reduces by half every iteration 
+ 
+-Time Complexity O(logn) - Logarithm
+
+
+Space complexity :- 
+o(1) - constant
+O(n) - Linear
+O(logn) - Logarithms
+
+look at the photo
+
+Notes :-
+        -multiple algo exist for the same problem and there is no one right solution.diff algo works well under diff constrains.
+        -the same algo with the same programming lang can be implement in diff way.
+        -when writing programs at work, don't lose sight of the big picture, rather than writing cleaver code,writing code that is simple to read and maintain.
+
+
+2. Omega Notation (Ω-Notation):-
+- Omega notation represents the lower bound of the running time of an algorithm. Thus, it provides the best case complexity of an algorithm.
+- The execution time serves as a lower bound on the algorithm’s time complexity.
+-It is defined as the condition that allows an algorithm to complete statement execution in the shortest amount of time.
+
+Mathematical Representation of Omega notation :
+-Ω(g(n)) = { f(n): there exist positive constants c and n0 such that 0 ≤ cg(n) ≤ f(n) for all n ≥ n0 }
+
+
+3. Theta Notation (Θ-Notation): Average
+- Theta notation encloses the function from above and below. Since it represents the upper and the lower bound of the running time of an algorithm, it is used for analyzing the average-case complexity of an algorithm.
+
+Mathematical Representation of Theta notation:
+Θ (g(n)) = {f(n): there exist positive constants c1, c2 and n0 such that 0 ≤ c1 * g(n) ≤ f(n) ≤ c2 * g(n) for all n ≥ n0}
+
+Note: Θ(g) is a set
+
+Properties of Asymptotic Notations: 
+1. General Properties:
+If f(n) is O(g(n)) then a*f(n) is also O(g(n)), where a is a constant.
+
+2. Transitive Properties:
+If f(n) is O(g(n)) and g(n) is O(h(n)) then f(n) = O(h(n)).
+
+3. Reflexive Properties: 
+Reflexive properties are always easy to understand after transitive.
+If f(n) is given then f(n) is O(f(n)). Since MAXIMUM VALUE OF f(n) will be f(n) ITSELF!
+Hence x = f(n) and y = O(f(n)) tie themselves in reflexive relation always.
+
+4. Symmetric Properties: 
+If f(n) is Θ(g(n)) then g(n) is Θ(f(n)).
+
+5. Transpose Symmetric Properties:
+If f(n) is O(g(n)) then g(n) is Ω (f(n)).
+
+6. Some More Properties: 
+1. If f(n) = O(g(n)) and f(n) = Ω(g(n)) then f(n) = Θ(g(n))
+2. If f(n) = O(g(n)) and d(n)=O(e(n)) then f(n) + d(n) = O( max( g(n), e(n) )) 
+3. If f(n)=O(g(n)) and d(n)=O(e(n)) then f(n) * d(n) = O( g(n) * e(n))
+
