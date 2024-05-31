@@ -4,7 +4,7 @@ Algorithm ?
 
 1. Time complexity :-
 
-- the time complexcity is mainly calculated by couting the number of steps to finish the execution.
+- the time complexity is mainly calculated by couting the number of steps to finish the execution.
 - line of code ∝(inversely proportional ) time
 - Amount of time taken by algo to run, as a function of input size.
 -time comp directly depend on input
@@ -19,9 +19,43 @@ Input space :- how much variable we are taking
 
 
 
+Notes :-
+Algorithm :- step to do anything
+
+Eg:- Array :- 
+
+let data = []
+element = 10
+define loop
+match element
+if element == match
+search complete
+if not match
+no result find
+
+complexity :-
 
 
 
-<!-- Go to the 2 asymptotic page -->
+Algorithm :- 
+1. Time Complexity :-
+- The time complexity is mainly calculated by counting the number of steps to finishthe execution
+- line of instructions * time complexity
+
+Eg:-
+ => computer(1992) => 6 lines of code execution
+
+2. Space :-
+-Space complexity is the amount of space required to  solve a problem
+-Space complexity = Auxilliary space + Input Size
+How we count Space :- Array 10 lakh value + 2 gb Space + player + sound system + video + graphic + vs code + compiler + memory
+- Eg :- big program taking 1 mb so that is a space complexity 
+
+
+3. Big O Notation :-
+- Used to denote Algorithm complexity(both)
+- this is universal standard
+
+<!-- Go to the 2 asymptotic analysis and notation page -->
 
 
