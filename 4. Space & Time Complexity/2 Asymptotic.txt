@@ -166,4 +166,3 @@ If f(n) is O(g(n)) then g(n) is Ω (f(n)).
 1. If f(n) = O(g(n)) and f(n) = Ω(g(n)) then f(n) = Θ(g(n))
 2. If f(n) = O(g(n)) and d(n)=O(e(n)) then f(n) + d(n) = O( max( g(n), e(n) )) 
 3. If f(n)=O(g(n)) and d(n)=O(e(n)) then f(n) * d(n) = O( g(n) * e(n))
-
