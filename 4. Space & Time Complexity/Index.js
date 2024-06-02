@@ -27,17 +27,17 @@ console.log(funnyNumberArray(5));
 // String, arrays, obkects ; => might change with respect to input size
 
 // O(n^2) Space Comp.
-// function createMatrix(n) {
-//   let matrix = [];
-//   for (let i = 0; i < n; i++) {
-//     matrix[i] = [];
-//     for (let j = 0; j < n; j++) {
-//       matrix[i][j] = i + j;
-//     }
-//   }
-//   return matrix;
-// }
+function createMatrix(n) {
+  let matrix = [];
+  for (let i = 0; i < n; i++) {
+    matrix[i] = [];
+    for (let j = 0; j < n; j++) {
+      matrix[i][j] = i + j;
+    }
+  }
+  return matrix;
+}
 
-// // example usage
-// const matrix = createMatrix(10);
-// console.log(matrix);
+// example usage
+const matrix = createMatrix(10);
+console.log(matrix);
