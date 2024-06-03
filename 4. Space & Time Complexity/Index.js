@@ -10,7 +10,7 @@ const score = [12, 3234, 54, 23, 45]; //3368
 console.log(funnyNumber(score));
 
 const funnyNumberArray = (n) => {
-  const array = [];
+  // const array = [];
   for (let i = 0; i < n; i++) {
     array.push(i * 69);
   }
