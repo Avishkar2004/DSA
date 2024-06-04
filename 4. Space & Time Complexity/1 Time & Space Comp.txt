@@ -40,7 +40,9 @@ complexity :-
 Algorithm :- 
 1. Time Complexity :-
 - The time complexity is mainly calculated by counting the number of steps to finishthe execution
-- line of instructions * time complexity
+- line of instructions(line) * time complexity
+- f(n) = Time Complexity
+f(n) = N*N = N
 
 Eg:-
  => computer(1992) => 6 lines of code execution

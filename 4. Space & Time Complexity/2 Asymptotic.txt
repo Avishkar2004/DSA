@@ -1,7 +1,57 @@
 How to represent complexity ?
 what is Asymptotic Notation ? 
 - Asymptotic Notations are mathematical tools that allow you to analyze an algorithm’s running time by identifying its behavior as its input size grows.
-- .This is also referred to as an algorithm’s growth rate.
+- This is also referred to as an algorithm’s growth rate.
+- problem ko resolve krne ke liye konsi algorithm or data str acchi rahegi vo check karta hai
+
+How to calculate Time Complexity ?
+=> Eg =>
+search = [1,9,10....]
+=> Linear or Binary search ?
+
+Time comp :- no.of Line executes(IMP)
+Space comp :- variable , space
+
+1.Time Complexity :-
+
+line of no = 6
+executes :- 100
+
+total := 106
+
+- its depends on input
+
+Eg:-
+
+array = [20,5,9,31,49,10] = (6 input)
+
+let x = [20,5,9,31,49,10] = 100
+let = m
+
+for {
+    -
+    for{}
+    -
+    -
+}
+
+print(x)
+
+6 static line
+
+6*6 = 42 after another one loop add
+
+100 * 100 = 10000
+10000 + 6 = 10006
+
+
+How to denote Time Complexity :-
+
+* f(n) = Time Complexity
+
+
+
+
 
 
 Asymptotic notations(3 notations)
@@ -11,7 +61,7 @@ Big O Notation :- Use to denote complexity(space and time)
 2.Omega notation :-(Ω-notation) - Best case complexity
 3.Theta Notation :-(θ-notation) - Average case complexity
 
-Big-O Notation(O- notation)
+1. Big-O Notation(O- notation)
 - Big-O notation represents the upper bound of the running time of an algorithm. Therefore, it gives the worst-case complexity of an algorithm.
 - .It is the most widely used notation for Asymptotic analysis.
 - .It specifies the upper bound of a function.
