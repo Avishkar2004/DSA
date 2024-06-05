@@ -234,10 +234,12 @@ console.log(dummy)
 
 8. ARRAY SORTING(Sorting) :-
 - using nested loops
-- bubble sort
+- This is a  bubble sort
 - Size * Size
 
+
 let data = [40, 30, 12, 25];
+let data = [34, 3, 1, 25];
 for (let i = 0; i < data.length; i++) {
   console.log(i);
   for (let j = 0; j < data.length; j++) {
