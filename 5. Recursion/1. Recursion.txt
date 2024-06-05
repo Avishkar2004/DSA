@@ -1,10 +1,17 @@
-Recursion :-
+Re-cursion :-
 -that is, function calling itself again and again until it doesn’t have left with it anymore.
 -We may think of recursion (informally) as like running on a racing track again and again but each time the laps getting smaller and smaller.
 -As we have seen that recursion is function keep calling itself again and again and eventually gets stopped at its own, but we may also realize a fact that a function doesn’t stop itself.
 -Therefore to make function stop at some time, we provide something calling Base Case, which lets any function realize that “Yes, its time to get terminated!”.
 -After giving the base case condition, we implement the recursion part in which we call function again as per the required result.
 Eg:-“Fibonacci Series”, “Longest Common Subsequence”, “Palindrome Check” and so on.
+
+Eg:-
+function Apple(){
+    Apple() //after proper condition, u can do anything sorting,merging,adding...etc
+}
+Apple()
+
 
 -We may also think recursion in the form of loop in which for every user passed parameter function gets called again and again and hence produces its output as per the need,
 
@@ -39,16 +46,13 @@ console.log(checkNumber(5))
 Output :-
 1 is odd
 
-
-
-
 Recursion is data str 
 eg: - array , stack, queue, linked list
 
 
 Re-Cursion :-
 jo function khud ko bar bar call karta hai
-- is all about condition
+- it's all about condition
 
 
 function apple() {
@@ -93,6 +97,8 @@ function factorial(item) {
     
     // Recursive case: calculate factorial using the formula n! = n * (n-1)!
     return item * factorial(item - 1);
+      // return 5*factorial(5-1)*factorial(4-1)*factorial(3-1)*factorial(4-1)*factorial(5-1)
+
 }
 
 // Example usage:
@@ -103,18 +109,22 @@ let data = 5;
 console.log(factorial(data));
 
 
-
 -USING WHILE LOOP
 
 
-let data = ['batman', 'iron','man', 'spider','man','vision']
+let data = ["batman", "iron", "man", "spider", "man", "vision"];
+let i = 0;
 
-let i  = 0;
-
-while(i < data.length) {
-    console.log(data[i])
-    i++
+while (i<data.length) {
+  console.log(data[i]);
+  i++;
 }
 
 
-
+Output :-
+batman
+iron
+man
+spider
+man
+vision

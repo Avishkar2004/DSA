@@ -1,20 +1,7 @@
-function subset(nums) {
-  let result = [];
-  let temp = [];
+let data = ["batman", "iron", "man", "spider", "man", "vision"];
+let i = 0;
 
-  function recursiveSubset(nums, i) {
-    if (i === nums.length) {
-      return result.push([...temp]);
-    }
-
-    temp.push(nums[i]);
-    recursiveSubset(nums, i + 1);
-    temp.pop();
-    recursiveSubset(nums, i + 1);
-  }
-
-  recursiveSubset(nums, 0);
-  return result;
+while (i<data.length) {
+  console.log(data[i]);
+  i++;
 }
-
-console.log(subset([1, 2, 3]));
