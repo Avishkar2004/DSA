@@ -49,10 +49,29 @@ How to denote Time Complexity :-
 
 * f(n) = Time Complexity
 
+calculate Time Complextiy :-
+
+  f(n) = (n*n)n² + 6
+  f(n) = n² + 6
 
 
+How to calculate time complexity :-
+Equtation:- f(n) = 5n²+6n+12
 
+n = [9,3,0,5]
+for(
+    for() 
 
+)
+
+for(
+
+)
+
+5(10)²+6(10) + 12
+5(100) + 60+15
+500+60+12
+500 (we removed 60 + 12)
 
 Asymptotic notations(3 notations)
 
