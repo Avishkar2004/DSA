@@ -17,7 +17,7 @@ There are different use cases, and everyone has their own opinion. I think they 
 -Breaking recursion
 function factorial (number) {
     if(number === 1) {
-        retur number
+        return number
     } else {
         return number * factorial(number - 1)
     }
@@ -29,7 +29,7 @@ factorial(5) //120
 To calculate factorial, you sum all numbers until you reach one. That is also the end case for our recursion, and it is why once we reach value one, we don’t call factorial function anymore.
 
 
-1. Tail recursion
+1. Tail recursion :-
 -Tail recursion is a type of recursive function when the last thing executed is a recursive call.
 
 factorial(5); // step 1
@@ -110,8 +110,6 @@ Output =
 1
 2
 3
-
-
 
 
 This is a function chaining :-
