@@ -2,11 +2,16 @@
 how to reverse this 
 [0,9,20,3]
 
-Logic
+Logic :-
+
 
 let data = [5, 12, 64, 89, 0];
 
 let temp;
+
+data.sort((a, b) => a - b);
+console.log("Sorted Array", data);
+
 function customReverse(data, start, end) {
   console.log(data);
   if (start <= end) {
