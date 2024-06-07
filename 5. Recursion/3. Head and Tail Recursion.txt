@@ -83,6 +83,7 @@ fun(x)
 output :-
 
 1 2 3
+
 watch head recursion photo 
 
 Let’s understand the example by tracing tree of recursive function. That is how the calls are made and how the outputs are produced.
