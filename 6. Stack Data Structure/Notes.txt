@@ -1,4 +1,6 @@
 //Stack In Java Script
+Stack is a part of linear data structure
+
 
 let myStack = new Stack();
 
@@ -31,20 +33,24 @@ print :-
 
  push method :-
 
+This is our stack
 const data = [];
 let currentSize = data.length;
 let maxValue = 5;
 
 function push(newVal) {
   data[currentSize] = newVal;
+  currentSize++
 }
 
 push(20);
+push(20);
+push(20);
 console.log(data);
 
-Output:- [ 20 ]
+Output:- [ 20, 20, 20 ]
 
-//array :-
+Push :-
 
 const data = [];
 let currentSize = data.length;
@@ -65,7 +71,7 @@ console.log(data);
 
 Output :- [ 20, 20, 20, 20, 20, 20 ]
 
-//array :-
+Push With maximum Stack length :-
 
 const data = [];
 let currentSize = data.length;
@@ -94,7 +100,7 @@ Alert : stack is full, you can't add 20
 
 
 
-//array :-
+//Push And Pop :-
 
 const data = [];
 let currentSize = data.length;
@@ -251,3 +257,20 @@ You can use these operations to perform various operations on the stack. For exa
 
 
 
+Stack in Class :-
+
+class Avishkar {
+  //! why constructor :- jab bhi hum log class ko call karte hai tab sabse pahle constructor call hota hai
+ item = []
+ currentSize
+ maxSize;
+  constructor() {
+    console.log("first")
+  }
+  push() {}
+
+  pop() {}
+}
+
+//!This is instance
+st1 = new Avishkar() //First
