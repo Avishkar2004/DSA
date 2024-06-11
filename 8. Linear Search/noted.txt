@@ -1,6 +1,7 @@
 The Searching Algorithm can be implemented with other languages as well. But here we will work with JavaScript to solve the Searching Algorithms. These algorithms are used to handle or work with the search related task in our projects or any applications that require searching. Searching is made easier by these algorithms. Searching is fundamental to any programming language. It would be a waste to have data structures, and no way of searching through them.The two searching algorithms we will be looking at are Linear search, and Binary search.When data items are random or not sorted, we use sequential or linear search. When data is already sorted, we use binary search. Binary search only works when your data is sorted, and we must take into account the cost of sorting the data before we even begin searching through it. When writing code, performance is everything so we need to think through before we execute them. Let’s look at each algorithm.
 
 
+The time complexity of the Linear Search algorithm is O(n), where n is the number of elements in the array. The space complexity is O(1) as it requires a constant amount of extra space regardless of the input size.
 
 Searching :- array hai 
 
@@ -20,6 +21,9 @@ Pseudocode
 
 O(1) best,O(n) averag
 
+Eg 1 :-
+
+
 var linearSearch = function(city, value) {
     for(let i= 0; i< city.length; i++) {
         if(city[i] === value) 
@@ -35,7 +39,7 @@ Output :- 3
 
 - complexity of Linear Search Alog :-
 
-Eg:- 
+Eg 2:- 
 
 -Time complexity :- f(n) - depends on input element f(n) = o(n^2) Eg :- 6 * 6 
 - Space complexity :- 
@@ -61,6 +65,22 @@ console.log(pos);
 if(!pos) {
     alert("Element not found")
 }
+
+
+// Eg 3:-
+function naiveSearch(str, word) {
+  var count = 0;
+  for (var i = 0; i < str.length; i++) {
+    for (var j = 0; j < word.length; j++) {
+      if (word[j] !== str[i + j]) break;
+      if (j === word.length - 1) count++;
+    }
+  }
+  return count;
+}
+
+console.log(naiveSearch("search and find", "find"));
+
 
 NOTES :-
 Searching algorithms are essential tools in computer science used to locate specific items within a collection of data. These algorithms are designed to efficiently navigate through data structures to find the desired information, making them fundamental in various applications such as databases, web search engines, and more.
