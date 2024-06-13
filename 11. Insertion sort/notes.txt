@@ -8,7 +8,7 @@ Insertion Sort Algorithm :-
 
 To sort an array of size N in ascending order iterate over the array and compare the current element (key) to its predecessor, if the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.
 
-Working of Insertion Sort algorithm
+Working of Insertion Sort algorithm :-
 
 Consider an example: arr[]: {12, 11, 13, 5, 6}
 
@@ -154,3 +154,59 @@ Yes, insertion sort is a stable sorting algorithm.
 Q5. When is the Insertion Sort algorithm used?
 
 Insertion sort is used when number of elements is small. It can also be useful when the input array is almost sorted, and only a few elements are misplaced in a complete big array.
+
+
+
+======================
+
+Insertion Sort :-
+
+//! do loop chalenge ek descendign order mai or ek ascending order mai
+
+let arr = [12, 11, 13, 5, 6];
+
+function insertionSort(data) {
+  let i, current, j;
+  for (i = 1; i < data.length; i++) {
+    current = data[i];
+    j = i - 1;
+    while (j >= 0 && data[j] > current) {
+      data[j + 1] = data[j];
+      j = j - 1;
+    }
+    data[j + 1] = current;
+  }
+}
+
+insertionSort(arr);
+console.log(arr);
+
+
+
+
+============
+
+arr = [15,20,23,3,9,11,0,8]
+output :- [0,8,9,11,15,20,23,3] 
+
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+      let key = arr[i];
+      let j = i - 1;
+
+      // Move elements of arr[0..i-1], that are greater than key,
+      // to one position ahead of their current position
+      while (j >= 0 && arr[j] > key) {
+          arr[j + 1] = arr[j];
+          j = j - 1;
+      }
+      arr[j + 1] = key;
+  }
+  return arr;
+}
+
+let arr = [15, 20, 23, 3, 9, 11, 0, 8];
+let sortedArray = insertionSort(arr.slice(0, arr.length - 1)); // Sort all but the last element
+sortedArray.push(arr[arr.length - 1]); // Append the last element
+
+console.log(sortedArray);
