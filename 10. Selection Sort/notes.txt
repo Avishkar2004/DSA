@@ -128,5 +128,3 @@ The default implementation of the Selection Sort Algorithm is not stable. Howeve
 Q2. Is Selection Sort Algorithm in-place?
 
 Yes, Selection Sort Algorithm is an in-place algorithm, as it does not require extra space.
-
-

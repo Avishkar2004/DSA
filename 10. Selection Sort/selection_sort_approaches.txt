@@ -1,12 +1,40 @@
-// This is decending order
-// 1 tarika ho gaya ye sort krne ka
-// let items = [20, 12, 53, 3, 8, 760];
+//This is ascending order
+let items = [20, 12, 53, 3, 8, 760];
+function SelectionSort(data) {
+  //! console.log(data); [ 20, 12, 53, 3 ]
+  let minId;
+  for (let i = 0; i < data.length; i++) {
+    minId = i;
+    for (let j = i; j < data.length; j++) {
+      if (data[j] < data[minId]) {
+        minId = j;
+      }
+    }
+    //! isko hame swap karna padega
+    let temp = data[minId];
+    data[minId] = data[i];
+    data[i] = temp;
+  }
+}
+
+SelectionSort(items);
+console.log(items);
+
+// Complexity when we use 2 loops(loops pure chal rahe honge) O(n^^2)
+//One time loop = N
+//Two time loop = (n^2)
+
+
+
+This is decending order :- 
+// 1. Approach
+- Change the loops
+// let items = [20, 12, 53, 3];
 // function SelectionSort_Method1(data) {
 //   //! console.log(data); [ 20, 12, 53, 3 ]
 //   let minId;
 //   for (let i = data.length - 1; i >= 0; i--) {
 //     console.log(i)
-
 //     minId = i;
 //     for (let j = i - 1; j >= 0; j--) {
 //       if (data[j] < data[minId]) {
@@ -25,15 +53,19 @@
 //Output :- [ 760, 53, 20, 12, 8, 3 ]
 
 
+2. Approach :-
+- Change the condition here
 
-// 2 tarika
-let item = [20, 12, 53, 3, 8, 760];
-function SelectionSort_Method2(data) {
+
+
+let items = [20, 12, 53, 3, 8, 760];
+function SelectionSort(data) {
   //! console.log(data); [ 20, 12, 53, 3 ]
   let minId;
   for (let i = 0; i < data.length; i++) {
     minId = i;
     for (let j = i; j < data.length; j++) {
+      //! Change the condition here
       if (data[j] > data[minId]) {
         minId = j;
       }
@@ -45,7 +77,5 @@ function SelectionSort_Method2(data) {
   }
 }
 
-SelectionSort_Method2(item);
-console.log(item);
-
-//Output :- [ 760, 53, 20, 12, 8, 3 ]
+SelectionSort(items);
+console.log(items);
