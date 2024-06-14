@@ -1,0 +1,40 @@
+1. Anagram :-
+- Check String is Anagram or not :-
+
+
+An Anagram of a string is another string that contains the same characters, only the order of characters can be different. For example, “abcd” and “dabc” are an anagram of each other. Examples: Input: str1 = “listen” str2 = “silent”
+
+An anagram is a word or phrase that's formed by rearranging the letters of another word or phrase. For example, the letters that make up “A decimal point” can be turned into the anagram “I'm a dot in place.”
+- length should be same
+- characters reapeatance
+
+
+function CheckAnagram(str1, str2) {
+  let charcount = {};
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  for (ch of str1) {
+    charcount[ch] = (charcount[ch] || 0) + 1;
+  }
+  //   console.log(ch);
+  for (ch of str2) {
+    // console.log(charcount[ch]);
+    if (!charcount[ch]) {
+      return false;
+    }
+    charcount[ch]--;
+  }
+  return true;
+}
+
+// console.log(CheckAnagram("helo", "ehllo")) //false
+
+console.log(CheckAnagram("hello", "ehllo")); // true
+
+
+2. Palindrome :-
+- Check String is palindrome or not
+a word, phrase, or sequence that reads the same backwards as forwards
+
+
