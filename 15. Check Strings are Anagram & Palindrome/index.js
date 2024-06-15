@@ -1,18 +1,21 @@
-function palindrome(data) {
-  let start = 0;
-  let end = data.lenght - 1;
-  let res = true;
-
-  while (end > start) {
-    if (data[start] !== data[end]) {
-      res = false;
-      break;
-    }
-    start++;
-    end--;
+function anagram(str1, str2) {
+  let charcount = {};
+  if (str1.lenght !== str2.lenght) {
+    return false;
   }
-  return res;
+
+  for (ch of str1) {
+    charcount[ch] = (charcount[ch] || 0) + 1;
+  }
+
+  for (ch of str2) {
+    if (!charcount[ch]) {
+      return false;
+    }
+    charcount[ch]--;
+  }
+  return true;
 }
 
-let str = "level";
-console.log(palindrome(str));
+
+console.log(anagram("hello", "ehllo")); // true
