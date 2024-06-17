@@ -5,6 +5,12 @@ linked list  depends on nodes, har ek node ke andar 2 part hote hai 1.value 2.ne
 - js ke adr ye dikhange object ke form mai
 
 
+what we have in node ?
+- head, tail, node, val, next
+
+node => object ki trh dikhenge
+
+
 This ia linked list hai
 
 class List {
@@ -113,3 +119,409 @@ List {
 
 
 
+==============
+
+
+Traversing :-
+
+
+class List {
+  constructor(data) {
+    this.head = {
+      value: data,
+      next: null,
+    };
+    this.tail = this.head;
+    this.size = 1;
+  }
+
+  appendNode(nodeData) {
+    let newNode = {
+      value: nodeData,
+      next: null,
+    };
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.size++;
+  }
+  Traversing() {
+    let counter = 0;
+    let currentNode = this.head
+    while (counter < this.size) {
+      console.log(currentNode)
+      currentNode = currentNode.next
+      counter++;
+
+    }
+  }
+}
+
+let list = new List(200);
+list.appendNode(300);
+list.appendNode(400);
+console.log(list);
+list.Traversing();
+
+============
+Update Node At Specific Positions :-
+
+class List {
+  constructor(data) {
+    this.head = {
+      value: data,
+      next: null,
+    };
+    this.tail = this.head;
+    this.size = 1;
+  }
+
+  appendNode(nodeData) {
+    let newNode = {
+      value: nodeData,
+      next: null,
+    };
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.size++;
+  }
+  Traversing() {
+    let counter = 0;
+    let currentNode = this.head;
+    while (counter < this.size) {
+      console.log(currentNode);
+      currentNode = currentNode.next;
+      counter++;
+    }
+  }
+
+  //! Update Node's specific valur
+  updateNode(oldValue, newValue) {
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      if (currentNode.value === oldValue) {
+        currentNode.value = newValue;
+        return;
+      }
+      currentNode = currentNode.next;
+    }
+    console.log("Valur not found in the list");
+  }
+
+
+  
+}
+
+let list = new List(200);
+list.appendNode(300);
+list.appendNode(400);
+console.log("Before Update");
+list.Traversing();
+
+list.updateNode(300, 30);
+console.log("After Update");
+list.Traversing();
+
+
+==========
+
+Remove Node Linked List at specific Positions
+
+class List {
+  constructor(data) {
+    this.head = {
+      value: data,
+      next: null,
+    };
+    this.tail = this.head;
+    this.size = 1;
+  }
+
+  appendNode(nodeData) {
+    let newNode = {
+      value: nodeData,
+      next: null,
+    };
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.size++;
+  }
+  Traversing() {
+    let counter = 0;
+    let currentNode = this.head;
+    while (counter < this.size) {
+      console.log(currentNode);
+      currentNode = currentNode.next;
+      counter++;
+    }
+  }
+
+  //! Update Node's specific valur
+  updateNode(oldValue, newValue) {
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      if (currentNode.value === oldValue) {
+        currentNode.value = newValue;
+        return;
+      }
+      currentNode = currentNode.next;
+    }
+    console.log("Valur not found in the list");
+  }
+
+  deleteNode(index) {
+    if (index < 1 || index > this.size) {
+      console.log("Index out of range");
+      return;
+    }
+
+    if (index === 1) {
+      this.head = this.head.next;
+      if (this.head === null) {
+        this.tail = null;
+      }
+    } else {
+      let counter = 1;
+      let lead = this.head;
+      while (counter < index - 1) {
+        lead = lead.next;
+        counter++;
+      }
+      lead.next = lead.next.next;
+      if (index === this.size) {
+        this.tail = lead;
+      }
+    }
+    this.size--;
+  }
+}
+
+let list = new List(200);
+list.appendNode(300);
+list.appendNode(400);
+list.updateNode(300, 2);
+list.Traversing();
+
+
+===================
+
+insertNode at specific position
+
+
+class List {
+  constructor(data) {
+    this.head = {
+      value: data,
+      next: null,
+    };
+    this.tail = this.head;
+    this.size = 1;
+  }
+
+  appendNode(nodeData) {
+    let newNode = {
+      value: nodeData,
+      next: null,
+    };
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.size++;
+  }
+  //!
+  Traversing() {
+    let counter = 0;
+    let currentNode = this.head;
+    while (counter < this.size) {
+      // console.log(currentNode);
+      currentNode = currentNode.next;
+      counter++;
+    }
+  }
+
+  //! Update Node's specific value
+  updateNode(oldValue, newValue) {
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      if (currentNode.value === oldValue) {
+        currentNode.value = newValue;
+        return;
+      }
+      currentNode = currentNode.next;
+    }
+    console.log("Value not found in the list");
+  }
+
+  //! Delete node at specific Position
+  deleteNode(index) {
+    if (index < 1 || index > this.size) {
+      console.log("Index out of range");
+      return;
+    }
+
+    if (index === 1) {
+      this.head = this.head.next;
+      if (this.head === null) {
+        this.tail = null;
+      }
+    } else {
+      let counter = 1;
+      let lead = this.head;
+      while (counter < index - 1) {
+        lead = lead.next;
+        counter++;
+      }
+      lead.next = lead.next.next;
+      if (index === this.size) {
+        this.tail = lead;
+      }
+    }
+    this.size--;
+  }
+
+  //! Add value at specific position
+  insertNode(index, value) {
+    let counter = 1;
+    let currentNode = this.head;
+    while (counter > index) {
+      counter++;
+      currentNode = currentNode.next;
+    }
+    let nextNode = currentNode.next;
+    currentNode.next = {
+      value: value,
+      next: nextNode,
+    };
+  }
+  
+}
+
+let list = new List(200);
+list.appendNode(300);
+list.appendNode(400);
+list.insertNode(2, 5000);
+// list.Traversing();
+
+
+console.log(list);
+
+
+=================
+
+Search Node in Linked List (based on value)
+
+
+
+class List {
+  constructor(data) {
+    this.head = {
+      value: data,
+      next: null,
+    };
+    this.tail = this.head;
+    this.size = 1;
+  }
+
+  appendNode(nodeData) {
+    let newNode = {
+      value: nodeData,
+      next: null,
+    };
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.size++;
+  }
+  //!
+  Traversing() {
+    let counter = 0;
+    let currentNode = this.head;
+    while (counter < this.size) {
+      // console.log(currentNode);
+      currentNode = currentNode.next;
+      counter++;
+    }
+  }
+
+  //! Update Node's specific value
+  updateNode(oldValue, newValue) {
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      if (currentNode.value === oldValue) {
+        currentNode.value = newValue;
+        return;
+      }
+      currentNode = currentNode.next;
+    }
+    console.log("Value not found in the list");
+  }
+
+  //! Delete node at specific Position
+  deleteNode(index) {
+    if (index < 1 || index > this.size) {
+      console.log("Index out of range");
+      return;
+    }
+
+    if (index === 1) {
+      this.head = this.head.next;
+      if (this.head === null) {
+        this.tail = null;
+      }
+    } else {
+      let counter = 1;
+      let lead = this.head;
+      while (counter < index - 1) {
+        lead = lead.next;
+        counter++;
+      }
+      lead.next = lead.next.next;
+      if (index === this.size) {
+        this.tail = lead;
+      }
+    }
+    this.size--;
+  }
+
+  //! Add value at specific position
+  insertNode(index, value) {
+    let counter = 1;
+    let currentNode = this.head;
+    while (counter > index) {
+      counter++;
+      currentNode = currentNode.next;
+    }
+    let nextNode = currentNode.next;
+    currentNode.next = {
+      value: value,
+      next: nextNode,
+    };
+  }
+  //! Search Node in Linked List (based on value)
+  SearchNode(data) {
+    let result = undefined;
+    let lead = this.head;
+    let loop = true;
+    while (loop) {
+      lead = lead.next;
+      // console.log(lead)
+      loop = !!lead;
+      if (loop && lead.value === data) {
+        loop = false;
+        result = lead;
+      }
+    }
+    if (result === undefined) {
+      console.log("Value dont exist");
+    } else {
+      console.log(result);
+    }
+  }
+}
+
+let list = new List(200);
+list.appendNode(300);
+list.appendNode(400);
+list.insertNode(2, 5000);
+// list.Traversing();
+
+list.SearchNode(400);
+
+// console.log(list);
