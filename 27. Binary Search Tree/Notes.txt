@@ -1,0 +1,312 @@
+tree ke max child 2 hi ho sakte hai
+
+left child sabse chota rahega root and right child
+
+
+Basic Structure / How to make Tree :-
+// Define a class called Node
+class Node {
+  // The constructor function initializes a new Node object with a given value
+  constructor(val) {
+    // 'value' property holds the value of the node
+    this.value = val;
+    // 'left' property points to the left child node, initially set to null
+    this.left = null;
+    // 'right' property points to the right child node, initially set to null
+    this.right = null;
+  }
+}
+
+// Define a class called BSTree (Binary Search Tree)
+class BSTree {
+  // The constructor function initializes a new BSTree object with a root property
+  constructor() {
+    // 'root' property holds the root node of the tree, initially set to null
+    this.root = null;
+  }
+  
+  // Method to check if the tree is empty
+  isTreeEmpty() {
+    // Returns true if the root is null, indicating the tree is empty
+    return this.root === null;
+  }
+}
+
+// Instantiate a new BSTree object
+let bst = new BSTree();
+// Log the result of checking if the tree is empty (should be true initially)
+console.log(bst.isTreeEmpty());
+
+
+=> true
+
+================================
+Insert Node in BST
+
+- should have root Node
+- add left Node
+- add right Node
+
+
+class Node {
+  constructor(val) {
+    this.value = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+class BSTree {
+  constructor() {
+    this.root = null;
+  }
+
+  isTreeEmpty() {
+    return this.root === null;
+  }
+
+  //! Make Tree
+  //! 1. We have to make a left and right as well using Node
+  makeTree(val) {
+    let newNode = new Node(val);
+    if (this.root === null) {
+      this.root = newNode;
+    } else {
+      this.insertNode(this.root, newNode);
+    }
+  }
+
+  //! This function will decide where u wanna add value left/right
+  insertNode(root, newNode) {
+    if (root.value > newNode.value) {
+      if (root.left === null) {
+        root.left = newNode;
+      } else {
+        this.insertNode(root.left, newNode);
+      }
+    } else {
+      if (root.right === null) {
+        root.right = newNode;
+      } else {
+        this.insertNode(root.right, newNode);
+      }
+    }
+  }
+}
+
+let bst = new BSTree();
+
+bst.makeTree(20);
+bst.makeTree(10);
+bst.makeTree(5);
+bst.makeTree(30);
+
+console.log(bst);
+
+
+Output :-
+
+BSTree {
+  root: Node {
+    value: 20,
+    left: Node { value: 10, left: [Node], right: null },
+    right: Node { value: 30, left: null, right: null }
+  }
+}
+
+
+
+==============
+
+Search Node In BST
+
+class Node {
+  constructor(val) {
+    this.value = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+class BSTree {
+  constructor() {
+    this.root = null;
+  }
+
+  isTreeEmpty() {
+    return this.root === null;
+  }
+
+  //! Make Tree
+  //! 1. We have to make a left and right as well using Node
+  makeTree(val) {
+    let newNode = new Node(val);
+    if (this.root === null) {
+      this.root = newNode;
+    } else {
+      this.insertNode(this.root, newNode);
+    }
+  }
+
+  //! This function will decide where u wanna add value left/right
+  insertNode(root, newNode) {
+    if (root.value > newNode.value) {
+      if (root.left === null) {
+        root.left = newNode;
+      } else {
+        this.insertNode(root.left, newNode);
+      }
+    } else {
+      if (root.right === null) {
+        root.right = newNode;
+      } else {
+        this.insertNode(root.right, newNode);
+      }
+    }
+  }
+
+  //! Serach Node in BST
+  Serach(root, val) {
+    if (root === null) {
+      return false;
+    } else if (root.value === val) {
+      return true;
+    } else if (root.value > val) {
+      return this.Serach(root.left, val);
+    } else {
+      return this.Serach(root.right, val);
+    }
+  }
+}
+
+let bst = new BSTree();
+
+bst.makeTree(20);
+bst.makeTree(10);
+bst.makeTree(5);
+bst.makeTree(30);
+console.log(bst.Serach(bst.root, 30));
+console.log(bst);
+
+Output :-
+
+true
+BSTree {
+  root: Node {
+    value: 20,
+    left: Node { value: 10, left: [Node], right: null },
+    right: Node { value: 30, left: null, right: null }
+  }
+}
+
+
+================
+
+Depth First Search Traversing in Binary Search Tree :-
+
+Pre , In,  Post , Order :-
+
+
+class Node {
+  constructor(val) {
+    this.value = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+class BSTree {
+  constructor() {
+    this.root = null;
+  }
+
+  isTreeEmpty() {
+    return this.root === null;
+  }
+
+  //! Make Tree
+  //! 1. We have to make a left and right as well using Node
+  makeTree(val) {
+    let newNode = new Node(val);
+    if (this.root === null) {
+      this.root = newNode;
+    } else {
+      this.insertNode(this.root, newNode);
+    }
+  }
+
+  //! This function will decide where u wanna add value left/right
+  insertNode(root, newNode) {
+    if (root.value > newNode.value) {
+      if (root.left === null) {
+        root.left = newNode;
+      } else {
+        this.insertNode(root.left, newNode);
+      }
+    } else {
+      if (root.right === null) {
+        root.right = newNode;
+      } else {
+        this.insertNode(root.right, newNode);
+      }
+    }
+  }
+
+  //! Serach Node in BST
+  Serach(root, val) {
+    if (root === null) {
+      return false;
+    } else if (root.value === val) {
+      return true;
+    } else if (root.value > val) {
+      return this.Serach(root.left, val);
+    } else {
+      return this.Serach(root.right, val);
+    }
+  }
+
+  PreOrder(root) {
+    if (root) {
+      //   console.log(root.value); 20,10,5,30
+      this.PreOrder(root.left);
+      this.PreOrder(root.right);
+    }
+  }
+
+  InOrder(root) {
+    if (root) {
+      this.InOrder(root.left);
+      //   console.log(root.value); //5,10,20,30
+      this.InOrder(root.right);
+    }
+  }
+
+  PostOrder(root) {
+    if (root) {
+      this.PostOrder(root.left);
+      this.PostOrder(root.right);
+      console.log(root.value); //5,10,30,20
+    }
+  }
+}
+
+let bst = new BSTree();
+
+bst.makeTree(20);
+bst.makeTree(10);
+bst.makeTree(5);
+bst.makeTree(30);
+// console.log(bst.Serach(bst.root, 30));
+// bst.PreOrder(bst.root);
+bst.InOrder(bst.root);
+bst.PostOrder(bst.root);
+// console.log(bst);
+
+
+
+================
+
+Breadth First Search :-
+
+use's queue 
+
