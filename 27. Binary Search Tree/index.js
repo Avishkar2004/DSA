@@ -80,7 +80,7 @@ class BSTree {
     }
   }
 
-  bfsTraversing(root) {
+  bfsTraversing() {
     let queue = [];
     queue.push(this.root);
     while (queue.length) {
@@ -91,7 +91,7 @@ class BSTree {
       if (current.right) {
         queue.push(current.right);
       }
-      console.log(current.value);
+      console.log(current.value); // 20,10,30,5
     }
   }
 }
