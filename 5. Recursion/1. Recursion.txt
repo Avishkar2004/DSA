@@ -6,11 +6,7 @@ Re-cursion :-
 -After giving the base case condition, we implement the recursion part in which we call function again as per the required result.
 Eg:-“Fibonacci Series”, “Longest Common Subsequence”, “Palindrome Check” and so on.
 
-Eg:-
-function Apple(){
-    Apple() //after proper condition, u can do anything sorting,merging,adding...etc
-}
-Apple()
+
 
 
 -We may also think recursion in the form of loop in which for every user passed parameter function gets called again and again and hence produces its output as per the need,

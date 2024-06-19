@@ -1,4 +1,4 @@
-Recursion and tail recursion with JavaScript
+Recursion and tail recursion with JavaScript :-
 A commonly used definition of recursion is that it is a self-invoking function. But what does that mean? Usually, you write the function, and then you call it. With recursion, inside of the body of the function, you also call it.
 
 
@@ -9,12 +9,10 @@ function recursionFunc() {
 
 Looking at snippet about, you might think, this is an infinite loop. What about stack overflow? And you are right. When writing recursion, you need to pay special attention to the end case. But there is a bit more about that one bellow. First, answer to the other question you might ask.
 
-
 Why and when would you use recursion?
 There are different use cases, and everyone has their own opinion. I think they are great when you need to loop something, but you don’t know how many times. Long pull from the server, where you are fetching data as long as there is some. Also, traversing the tree, like HTML nodes and nodes of binary trees.
 
-
--Breaking recursion
+-Breaking recursion :-
 function factorial (number) {
     if(number === 1) {
         return number
@@ -24,7 +22,6 @@ function factorial (number) {
 }
 
 factorial(5) //120
-
 
 To calculate factorial, you sum all numbers until you reach one. That is also the end case for our recursion, and it is why once we reach value one, we don’t call factorial function anymore.
 

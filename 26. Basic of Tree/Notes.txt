@@ -1,4 +1,4 @@
-- this is a linear data structure
+- Tree is a linear data structure
 
 linear :- jo ek seq ke andr rahta hai
 eg:- array, linked list
@@ -9,9 +9,17 @@ tree na data ki hirarical presentation hoti hai jiske andr data present hota hai
 
 Binary :- max uski 2 hi node ho sakti hai
 
+
+
 What is Binary Tree ?
 
+ - Additional Rule :-
+ 1.left node vo root se chota hoga (5)
+ 2. Root (10)
+ 2. Right Node sabse  bada hoga  (20)
 
+
+ 
 imp terminology :-
 
 Degree Of Nodes:- ek node ke kitne child hai

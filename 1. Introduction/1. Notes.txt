@@ -32,7 +32,7 @@ concopt :-
 -- recursion
 -- sorting
 -- 2 pointing
---2- pointer
+-- 2- pointer
 
 
 Data Structure :-
@@ -57,6 +57,7 @@ Advanced Ds :- (FAANG used to ask question)
 
 
 ===================
+
 What is Algorithm | Introduction to Algorithms
 Definition of Algorithm
 The word Algorithm means ” A set of finite rules or instructions to be followed in calculations or other problem-solving operations ”
@@ -202,4 +203,3 @@ The time complexity of an algorithm is also calculated by determining the follow
 Constant time part: Any instruction that is executed just once comes in this part. For example, input, output, if-else, switch, arithmetic operations, etc.
 Variable Time Part: Any instruction that is executed more than once, say n times, comes in this part. For example, loops, recursion, etc.
 Therefore Time complexity T(P)                        of any algorithm P is T(P) = C + TP(I), where C is the constant time part and TP(I) is the variable part of the algorithm, which depends on the instance characteristic I.
-
