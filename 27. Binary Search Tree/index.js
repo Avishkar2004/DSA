@@ -76,7 +76,7 @@ class BSTree {
     if (root) {
       this.PostOrder(root.left);
       this.PostOrder(root.right);
-    //   console.log(root.value); //5,10,30,20
+      //   console.log(root.value); //5,10,30,20
     }
   }
 
@@ -94,6 +94,53 @@ class BSTree {
       console.log(current.value); // 20,10,30,5
     }
   }
+
+  //! Find a Min Value
+  minValue(root) {
+    if (!root.left) {
+      return root.value;
+    } else {
+      return this.minValue(root.left);
+    }
+  }
+
+  //! Find a Max Value
+  maxValue(root) {
+    if (!root.right) {
+      return root.value;
+    } else {
+      return this.minValue(root.right);
+    }
+  }
+
+  //! Delete Node in BST
+
+  removeData(value) {
+    this.root = this.deleteNode(this.root, value);
+  }
+
+  deleteNode(root, value) {
+    if (root === null) {
+      return null;
+    }
+    if (value < root.value) {
+      root.left = this.deleteNode(root.left, value);
+    } else if (value > root.value) {
+      root.root = this.deleteNode(root.right, value);
+    } else {
+      if (!root.left && !root.right) {
+        return null;
+      } else if (!root.left) {
+        return root.right;
+      } else if (!root.right) {
+        return root.left;
+      }
+      root.value = this.minValue(root.right);
+      root.right = this.deleteNode(root.right, root.value);
+    }
+
+    return root;
+  }
 }
 
 let bst = new BSTree();
@@ -108,4 +155,11 @@ bst.makeTree(30);
 // bst.PostOrder(bst.root);
 // console.log(bst);
 
-bst.bfsTraversing(bst.root);
+// console.log(bst.minValue(bst.root))
+// console.log(bst.maxValue(bst.root))
+// console.log(bst)
+
+bst.removeData(20);
+
+// bst.bfsTraversing(bst.root);
+console.log(bst);
