@@ -67,39 +67,11 @@ if(!pos) {
 }
 
 
-// Eg 3:-
-function naiveSearch(str, word) {
-  var count = 0;
-  for (var i = 0; i < str.length; i++) {
-    for (var j = 0; j < word.length; j++) {
-      if (word[j] !== str[i + j]) break;
-      if (j === word.length - 1) count++;
-    }
-  }
-  return count;
-}
-
-console.log(naiveSearch("search and find", "find"));
-
-
 NOTES :-
 Searching algorithms are essential tools in computer science used to locate specific items within a collection of data. These algorithms are designed to efficiently navigate through data structures to find the desired information, making them fundamental in various applications such as databases, web search engines, and more.
 
 
-
-
-2. Binary Searching :- 
-
-
-
-
-
-
-
-
-3.String Search :-
-
-- This not totally related to linear search or Binary search. I just wanted to add it here as it is very much important for searching string. A very simple way to search strings is given below:
+2.String Search :-
 
 - Loop Over the longer string.
 - Loop Over the shorter string.
@@ -112,7 +84,7 @@ function naiveSearchs(str, word) {
     var count = 0
     for(let i = 0; i < str.length; i++) {
         for(let j = 0; j < str.length; j++) {
-            if(word[i] !== str[i + j]) breakl
+            if(word[i] !== str[i + j]) break
             if(j === word.length - 1 ) count ++
         }
     }
@@ -121,7 +93,6 @@ function naiveSearchs(str, word) {
 
 console.log(naiveSearch("search and find", "an"))
 output: [1]
-
 
 
 // Construct a table with table[i] as the length of the longest prefix of the substring 0..i
@@ -141,8 +112,6 @@ output: [1]
 // maxPrefix now will be 3
 // so the max prefix for table[9] is 3
 function makeTable(str) {
-  
-    
     var table = new Array(str.length);
     var maxPrefix = 0;
     

@@ -9,8 +9,7 @@ Sorting in Decending order    :- 31,25,12,9,1,0
 we have to compare
 jo hamare choti value rahegi usko replace kr denge
 
-we are goint to use for loop
-
+we are going to use for loop
 
 
 Notes :-
@@ -123,7 +122,7 @@ Does not preserve the relative order of items with equal keys which means it is 
 Frequently Asked Questions on Selection Sort
 Q1. Is Selection Sort Algorithm stable?
 
-The default implementation of the Selection Sort Algorithm is not stable. However, it can be made stable. Please see the stable Selection Sort for details.
+The default implementation of the Selection Sort Algorithm is not stable. However, it can be made stable. 
 
 Q2. Is Selection Sort Algorithm in-place?
 
