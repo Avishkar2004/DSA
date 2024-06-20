@@ -16,8 +16,7 @@ function display() {
 }
 
 function dequeue() {
-  if(currentSize > 0) {
-
+  if (currentSize > 0) {
     for (let i = 0; i < Queue.length; i++) {
       Queue[i] = Queue[i + 1];
       // console.log(Queue);
