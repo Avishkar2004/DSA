@@ -1,7 +1,8 @@
 what is graph ds ?
 
 - this is a non - linear data str
-
+- data nodes/vertices ki form mai present hota hai
+- edge ki help se nodes connected hote hai
 Types of graph :-
 
 1. Directed
@@ -63,3 +64,61 @@ If two nodes u and v are connected via an edge e, then the nodes u and v are cal
 Degree of the Node
 A degree of a node is the number of edges that are connected with that node. A node with degree 0 is called as isolated node.
 
+=================
+
+Graph Adjacency matrix :-
+
+In Array :-
+
+let data = [
+  [0, 1, 1, 0],
+  [1, 0, 1, 1],
+  [1, 1, 0, 0],
+  [0, 1, 0, 0],
+];
+
+console.log(data[3][2]); //0
+
+=============
+
+Adjacency List in Graph :-
+
+let AdjList = {
+    "a" :['b','c'],
+    "b" : ['a','c','d'],
+    "c" : ['a','b'],
+    "d" : ['b',]
+};
+
+
+console.log(AdjList.c) //['a', 'b']
+
+=============
+
+Make Graph Vertex / Nodes :-
+
+
+class Ghaph {
+  constructor() {
+    this.data = {};
+  }
+
+  addVertex(Vertex) {
+    if (!this.data[Vertex]) {
+      this.data[Vertex] = [];
+    }
+  }
+}
+
+const graph1 = new Ghaph();
+graph1.addVertex("A")
+graph1.addVertex("B")
+graph1.addVertex("C")
+graph1.addVertex("D")
+
+console.log(graph1);
+
+
+==============
+
+Add Vertex in Graph
