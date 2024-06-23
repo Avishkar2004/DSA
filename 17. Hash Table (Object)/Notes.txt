@@ -314,7 +314,8 @@ Another HashTable test
 
 Now there's no collision inside the HashTable instance. Great work!
 
-============
+=================
+
 let data = {
   name: "avishkar",
   age: 19,
