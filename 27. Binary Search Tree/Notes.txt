@@ -166,15 +166,15 @@ class BSTree {
   }
 
   //! Serach Node in BST
-  Serach(root, val) {
+  Search(root, val) {
     if (root === null) {
       return false;
     } else if (root.value === val) {
       return true;
     } else if (root.value > val) {
-      return this.Serach(root.left, val);
+      return this.Search(root.left, val);
     } else {
-      return this.Serach(root.right, val);
+      return this.Search(root.right, val);
     }
   }
 }
@@ -185,7 +185,7 @@ bst.makeTree(20);
 bst.makeTree(10);
 bst.makeTree(5);
 bst.makeTree(30);
-console.log(bst.Serach(bst.root, 30));
+console.log(bst.Search(bst.root, 30));
 console.log(bst);
 
 Output :-

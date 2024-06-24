@@ -79,14 +79,13 @@ In the above structure, each node is labeled with some number. Each arrow shown 
 - Descendant: The immediate successor of the given node is known as a descendant of a node. In the above figure, 10 is the descendant of node 5.
 
 
-* Properties of Tree data structure
+* Properties of Tree data structure :-
 - Recursive data structure: The tree is also known as a recursive data structure. A tree can be defined as recursively because the distinguished node in a tree data structure is known as a root node. The root node of the tree contains a link to all the roots of its subtrees. The left subtree is shown in the yellow color in the below figure, and the right subtree is shown in the red color. The left subtree can be further split into subtrees shown in three different colors. Recursion means reducing something in a self-similar manner. So, this recursive property of the tree data structure is implemented in various applications.
 
 3 photo
 
 - Number of edges:-
 If there are n nodes, then there would n-1 edges. Each arrow in the structure represents the link or path. Each node, except the root node, will have atleast one incoming link known as an edge. There would be one link for the parent-child relationship.
-
 
 - Depth of node x:
 The depth of node x can be defined as the length of the path from the root to the node x. One edge contributes one-unit length in the path. So, the depth of node x can also be defined as the number of edges between the root node and the node x. The root node has 0 depth.
@@ -97,7 +96,6 @@ The height of node x can be defined as the longest path from the node x to the l
 Based on the properties of the Tree data structure, trees are classified into various categories.
 
 * Implementation of Tree :-
-
 
 The tree data structure can be created by creating the nodes dynamically with the help of the pointers. The tree in the memory can be represented as shown below:
 

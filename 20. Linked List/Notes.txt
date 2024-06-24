@@ -11,7 +11,7 @@ what we have in node ?
 node => object ki trh dikhenge
 
 
-This ia linked list hai
+This is linked list:-
 
 class List {
   constructor(data) {
@@ -525,7 +525,6 @@ list.insertNode(2, 5000);
 list.SearchNode(400);
 
 // console.log(list);
-
 
 ===============
 

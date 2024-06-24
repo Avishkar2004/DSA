@@ -17,5 +17,3 @@ In the following image, the first element of the list that is i.e. 13 stored at 
 
 
 We can traverse the list in this way until we find any node containing null or -1 in its next part.
-
-
