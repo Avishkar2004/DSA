@@ -50,8 +50,7 @@ Advanced Ds :- (FAANG used to ask question)
 1.Tree
 2.Graph
 3.Dynamic Programming(DP)
-4.Trie
-
+4.Trie's
 
 
 
@@ -60,7 +59,7 @@ Advanced Ds :- (FAANG used to ask question)
 
 What is Algorithm | Introduction to Algorithms
 Definition of Algorithm
-The word Algorithm means ” A set of finite rules or instructions to be followed in calculations or other problem-solving operations ”
+The word Algorithm means ”A set of finite rules or instructions to be followed in calculations or other problem-solving operations ”
 Or
 ” A procedure for solving a mathematical problem in a finite number of steps that frequently involves recursive operations”.
 
@@ -172,15 +171,14 @@ For a standard algorithm to be good, it must be efficient. Hence the efficiency 
 1. Priori Analysis:
 “Priori” means “before”. Hence Priori analysis means checking the algorithm before its implementation. In this, the algorithm is checked when it is written in the form of theoretical steps. This Efficiency of an algorithm is measured by assuming that all other factors, for example, processor speed, are constant and have no effect on the implementation. This is done usually by the algorithm designer. This analysis is independent of the type of hardware and language of the compiler. It gives the approximate answers for the complexity of the program.
 
-
 2. Posterior Analysis:
 “Posterior” means “after”. Hence Posterior analysis means checking the algorithm after its implementation. In this, the algorithm is checked by implementing it in any programming language and executing it. This analysis helps to get the actual and real analysis report about correctness(for every possible input/s if it shows/returns correct output or not), space required, time consumed, etc. That is, it is dependent on the language of the compiler and the type of hardware used.
 
 
 What is Algorithm complexity and how to find it?
 An algorithm is defined as complex based on the amount of Space and Time it consumes. Hence the Complexity of an algorithm refers to the measure of the time that it will need to execute and get the expected output, and the Space it will need to store all the data (input, temporary data, and output). Hence these two factors define the efficiency of an algorithm. 
-The two factors of Algorithm Complexity are:
 
+The two factors of Algorithm Complexity are:
 Time Factor: Time is measured by counting the number of key operations such as comparisons in the sorting algorithm.
 Space Factor: Space is measured by counting the maximum memory space required by the algorithm to run/execute.
 
@@ -189,8 +187,6 @@ Space Factor: Space is measured by counting the maximum memory space required by
 
 How to calculate Space Complexity?
 The space complexity of an algorithm is calculated by determining the following 2 components: 
- 
-
 Fixed Part: This refers to the space that is required by the algorithm. For example, input variables, output variables, program size, etc.
 Variable Part: This refers to the space that can be different based on the implementation of the algorithm. For example, temporary variables, dynamic memory allocation, recursion stack space, etc.
 Therefore Space complexity S(P) of any algorithm P is S(P) = C + SP(I), where C is the fixed part and S(I) is the variable part of the algorithm, which depends on instance characteristic I.
@@ -202,4 +198,4 @@ The time complexity of an algorithm is also calculated by determining the follow
 
 Constant time part: Any instruction that is executed just once comes in this part. For example, input, output, if-else, switch, arithmetic operations, etc.
 Variable Time Part: Any instruction that is executed more than once, say n times, comes in this part. For example, loops, recursion, etc.
-Therefore Time complexity T(P)                        of any algorithm P is T(P) = C + TP(I), where C is the constant time part and TP(I) is the variable part of the algorithm, which depends on the instance characteristic I.
+Therefore Time complexity T(P) of any algorithm P is T(P) = C + TP(I), where C is the constant time part and TP(I) is the variable part of the algorithm, which depends on the instance characteristic I.
