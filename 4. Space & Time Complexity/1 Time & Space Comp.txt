@@ -18,7 +18,6 @@ Algorithm ?
 Input space :- how much variable we are taking
 
 
-
 Notes :-
 Algorithm :- step to do anything
 
@@ -34,7 +33,6 @@ if not match
 no result find
 
 complexity :-
-
 
 
 Algorithm :- 
@@ -59,5 +57,3 @@ How we count Space :- Array 10 lakh value + 2 gb Space + player + sound system +
 - this is universal standard
 
 <!-- Go to the 2 asymptotic analysis and notation page -->
-
-

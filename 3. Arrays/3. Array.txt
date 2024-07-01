@@ -29,8 +29,17 @@ for (let i = 0; i < data.length; i++) {
     console.log(`Arrya ${i} is ${data[i]}`);
   }
 
-output :- [2, 34, 45, 32, 34, 56, 63, 97, 34,53]
-
+output :- 
+rrya 0 is 2
+Arrya 1 is 34
+Arrya 2 is 45
+Arrya 3 is 32
+Arrya 4 is 34
+Arrya 5 is 56
+Arrya 6 is 63
+Arrya 7 is 97
+Arrya 8 is 34
+Arrya 9 is 53
 
 
 2. ACCESING :-
@@ -239,7 +248,7 @@ console.log(dummy)
 
 
 let data = [40, 30, 12, 25];
-let data = [34, 3, 1, 25];
+//let data = [34, 3, 1, 25];
 for (let i = 0; i < data.length; i++) {
   console.log(i);
   for (let j = 0; j < data.length; j++) {
