@@ -34,3 +34,22 @@ I Have 60 RS 2
 I Have 40 RS 3
 I Have 20 RS 4
 I dont have more money 5
+
+
+=============
+function functionA(n) {
+    if (n > 0) {
+        console.log("In functionA with n =", n);
+        functionB(n - 1); // Call functionB with n-1
+    }
+}
+
+function functionB(n) {
+    if (n > 0) {
+        console.log("In functionB with n =", n);
+        functionA(n - 1); // Call functionA with n-1
+    }
+}
+
+// Start the indirect recursion
+functionA(3);

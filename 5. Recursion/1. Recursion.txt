@@ -102,6 +102,7 @@ let data = 5;
 
 // Calling the factorial function with 'data' as an argument and logging the result
 console.log(factorial(data));
+Output :- 120
 
 
 -USING WHILE LOOP

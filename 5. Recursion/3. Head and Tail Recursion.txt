@@ -28,6 +28,8 @@ To calculate factorial, you sum all numbers until you reach one. That is also th
 
 1. Tail recursion :-
 -Tail recursion is a type of recursive function when the last thing executed is a recursive call.
+- In tail recursion, the recursive call is the last operation in the function. This means the function performs all necessary operations and then makes the recursive call.
+
 
 factorial(5); // step 1
 5 * factorial(4); // step 2
@@ -62,7 +64,10 @@ This type requires fewer operations and needs fewer items on a stack, which mean
 
 
 2. Head Recursion :-
-If a recursive function calling itself and that recursive call is the first statement in the function then it’s known as Head Recursion. There’s no statement, no operation before the call
+- If a recursive function calling itself and that recursive call is the first statement in the function then it’s known as Head Recursion. There’s no statement, no operation before the call
+- In head recursion, the recursive call is made before any other operations in the function. This means the function first calls itself and then performs the rest of the operations.
+
+
 -
 
 <!-- Head recursion -->
