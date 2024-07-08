@@ -19,7 +19,7 @@ function isValid(s) {
       if (isEmpty(stack)) {
         return false;
       }
-      const top = stack.pop();
+      // const top = stack.pop();
       if (
         (char === ")" && top !== "(") ||
         (char === "]" && top !== "[") ||
