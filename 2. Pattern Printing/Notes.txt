@@ -42,3 +42,100 @@ for (let i = 0; i <= 4; i++) {
           count++
         }
       }
+
+
+d) 
+
+*
+**
+***
+****
+*****
+
+function rightAngledTriangle(rows) {
+  for (let i = 1; i <= rows; i++) {
+    console.log('*'.repeat(i));
+  }
+}
+
+rightAngledTriangle(5);
+
+
+e)
+
+*****
+****
+***
+**
+*
+
+function invertedRightAngledTriangle(rows) {
+  for (let i = rows; i >= 1; i--) {
+    console.log('*'.repeat(i));
+  }
+}
+
+invertedRightAngledTriangle(5);
+
+
+f)
+
+    *
+   ***
+  *****
+ *******
+*********
+
+function pyramid(rows) {
+  for (let i = 1; i <= rows; i++) {
+    console.log(' '.repeat(rows - i) + '*'.repeat(2 * i - 1));
+  }
+}
+
+pyramid(5);
+
+
+g) 
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+
+function diamond(rows) {
+  for (let i = 1; i <= rows; i++) {
+    console.log(' '.repeat(rows - i) + '*'.repeat(2 * i - 1));
+  }
+  for (let i = rows - 1; i >= 1; i--) {
+    console.log(' '.repeat(rows - i) + '*'.repeat(2 * i - 1));
+  }
+}
+
+diamond(5);
+
+h) 
+
+*****
+*   *
+*   *
+*   *
+*****
+
+
+function hollowSquare(size) {
+  for (let i = 0; i < size; i++) {
+    if (i === 0 || i === size - 1) {
+      console.log('*'.repeat(size));
+    } else {
+      console.log('*' + ' '.repeat(size - 2) + '*');
+    }
+  }
+}
+
+hollowSquare(5);
+
+

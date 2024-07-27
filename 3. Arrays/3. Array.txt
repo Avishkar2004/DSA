@@ -24,24 +24,6 @@ console.log(i);
 }
 
 
-3.
-for (let i = 0; i < data.length; i++) {
-    console.log(`Arrya ${i} is ${data[i]}`);
-  }
-
-output :- 
-rrya 0 is 2
-Arrya 1 is 34
-Arrya 2 is 45
-Arrya 3 is 32
-Arrya 4 is 34
-Arrya 5 is 56
-Arrya 6 is 63
-Arrya 7 is 97
-Arrya 8 is 34
-Arrya 9 is 53
-
-
 2. ACCESING :-
 -access specific number 
 
@@ -71,7 +53,7 @@ let newEl = 33;
 let position = 2;
 console.log(data);
 //we have to start from last element
-//loop start from last element
+//loop started from last element
 for (let i = data.length - 1; i >= 0; i--) {
   if (i >= position) {
     data[i + 1] = data[i];

@@ -81,7 +81,6 @@ They help to automate processes and make them more reliable, faster, and easier 
 Algorithms also enable computers to perform tasks that would be difficult or impossible for humans to do manually.
 They are used in various fields such as mathematics, computer science, engineering, finance, and many others to optimize processes, analyze data, make predictions, and provide solutions to problems.
 
-
 What are the Characteristics of an Algorithm?
 
 watch 1 photo
@@ -181,7 +180,6 @@ An algorithm is defined as complex based on the amount of Space and Time it cons
 The two factors of Algorithm Complexity are:
 Time Factor: Time is measured by counting the number of key operations such as comparisons in the sorting algorithm.
 Space Factor: Space is measured by counting the maximum memory space required by the algorithm to run/execute.
-
 
 1. Space Complexity: The space complexity of an algorithm refers to the amount of memory required by the algorithm to store the variables and get the result. This can be for inputs, temporary operations, or outputs. 
 
