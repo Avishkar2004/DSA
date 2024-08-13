@@ -156,12 +156,11 @@ Q5. When is the Insertion Sort algorithm used?
 
 Insertion sort is used when number of elements is small. It can also be useful when the input array is almost sorted, and only a few elements are misplaced in a complete big array.
 
-
 ======================
 
 Insertion Sort :-
 
-//! do loop chalenge ek descendign order mai or ek ascending order mai
+//! loop chalenge ek descendign order mai or ek ascending order mai
 
 let arr = [12, 11, 13, 5, 6];
 

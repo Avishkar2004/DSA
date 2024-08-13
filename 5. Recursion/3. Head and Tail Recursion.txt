@@ -7,7 +7,7 @@ function recursionFunc() {
     recursionFunc();
 }
 
-Looking at snippet about, you might think, this is an infinite loop. What about stack overflow? And you are right. When writing recursion, you need to pay special attention to the end case. But there is a bit more about that one bellow. First, answer to the other question you might ask.
+Looking at snippet about, you might think, this is an infinite loop. What about stack overflow? And you are right. When writing recursion, you need to pay special attention to the edge case. But there is a bit more about that one bellow. First, answer to the other question you might ask.
 
 Why and when would you use recursion?
 There are different use cases, and everyone has their own opinion. I think they are great when you need to loop something, but you don’t know how many times. Long pull from the server, where you are fetching data as long as there is some. Also, traversing the tree, like HTML nodes and nodes of binary trees.
@@ -66,8 +66,6 @@ This type requires fewer operations and needs fewer items on a stack, which mean
 2. Head Recursion :-
 - If a recursive function calling itself and that recursive call is the first statement in the function then it’s known as Head Recursion. There’s no statement, no operation before the call
 - In head recursion, the recursive call is made before any other operations in the function. This means the function first calls itself and then performs the rest of the operations.
-
-
 -
 
 <!-- Head recursion -->

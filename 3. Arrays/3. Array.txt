@@ -217,10 +217,6 @@ TIme Complexity :- No.of lines
 - vary on system processor, current program working on our system, depend on system, ram , bytes.
 
 
-REVERSE ARRAY :-
-let dummy = [1,2,3,4]
-dummy.reverse()
-console.log(dummy)
 
 
 8. ARRAY SORTING(Sorting) :-
@@ -247,3 +243,58 @@ for (let i = 0; i < data.length; i++) {
 console.log(data);
 
 [ 12, 25, 30, 40 ]
+
+
+
+REVERSE ARRAY :-
+1. 
+let dummy = [1,2,3,4]
+dummy.reverse()
+console.log(dummy)
+
+
+2.
+[3, 20, 9, 0]
+how to reverse this 
+[0,9,20,3]
+
+Logic :-
+
+
+let data = [5, 12, 64, 89, 0];
+
+let temp;
+
+data.sort((a, b) => a - b);
+console.log("Sorted Array", data);
+
+function customReverse(data, start, end) {
+  console.log(data);
+  if (start <= end) {
+    temp = data[start];
+    data[start] = data[end];
+    data[end] = temp;
+    customReverse(data, start + 1, end - 1);
+  } else {
+    return;
+  }
+}
+
+customReverse(data, 0, data.length - 1);
+
+Output :-
+[ 5, 12, 64, 89, 0 ]
+[ 0, 12, 64, 89, 5 ]
+[ 0, 89, 64, 12, 5 ]
+[ 0, 89, 64, 12, 5 ]
+
+
+Inbuild Function in js
+
+let item = [200, 30, 340, 23, 34, 4];
+
+item.reverse();
+
+console.log(item);
+[ 4, 34, 23, 340, 30, 200 ]
+

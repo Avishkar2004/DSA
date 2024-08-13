@@ -7,7 +7,7 @@ Algorithm ?
 - the time complexity is mainly calculated by couting the number of steps to finish the execution.
 - line of code ∝(inversely proportional ) time
 - Amount of time taken by algo to run, as a function of input size.
--time comp directly depend on input
+- time comp directly depend on input
 
 2. Space Complexity :-
 
@@ -16,7 +16,6 @@ Algorithm ?
 - amount of memory taken by algo to run, as a function of input size
 
 Input space :- how much variable we are taking
-
 
 Notes :-
 Algorithm :- step to do anything

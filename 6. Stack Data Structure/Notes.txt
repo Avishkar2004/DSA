@@ -98,8 +98,6 @@ Output :- [20, 20, 20, 20, 20]
 Alert : stack is full, you can't add 20
 
 
-
-
 //Push And Pop :-
 
 const data = [];
@@ -254,7 +252,6 @@ in this example,  we have a stack with a maximum size of 5. The push operation a
 In this example, we have pushed 5 elements to the stack and then popped 4 elements from it. The remaining elements in the stack are [20].
 
 You can use these operations to perform various operations on the stack. For example, you can use the push operation to add elements to the stack, the pop operation to remove elements from the stack, the peek operation to get the top element of the stack without removing it, the isempty operation to check if the stack is empty or not, and the print operation to print all the elements in the stack.
-
 
 
 Stack in Class :-

@@ -6,9 +6,6 @@ Re-cursion :-
 -After giving the base case condition, we implement the recursion part in which we call function again as per the required result.
 Eg:-“Fibonacci Series”, “Longest Common Subsequence”, “Palindrome Check” and so on.
 
-
-
-
 -We may also think recursion in the form of loop in which for every user passed parameter function gets called again and again and hence produces its output as per the need,
 
 Eg 1 :- number decrement counter
@@ -31,8 +28,8 @@ Output :-
 Example 2: In this example, we will be developing a code that will help us to check whether the integer we have passed is Even or Odd. By continuously subtracting 2 from a number, the result would be either 0 or 1. So if it is 0 then our number is Even otherwise it is Odd.
 
 let checkNumber = (number) => {
-    if(number === 0) return (number + " Is even)
-    if(number === 1) return (number + " Is odd);
+    if(number === 0) return (number + " Is even")
+    if(number === 1) return (number + " Is odd");
     return checkNumber(number - 2)
 }
 

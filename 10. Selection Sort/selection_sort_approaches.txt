@@ -56,8 +56,6 @@ This is decending order :-
 2. Approach :-
 - Change the condition here
 
-
-
 let items = [20, 12, 53, 3, 8, 760];
 function SelectionSort(data) {
   //! console.log(data); [ 20, 12, 53, 3 ]

@@ -47,7 +47,6 @@ what is task ?
       }
 
 
-
 function someOperation(n) {
   // 3 operation performing
   return (n * (n + 5)) / 2; 
@@ -102,7 +101,7 @@ console.log(funnyNumberArray(5))
 
 // Primite Data type :-
 // Boolean , num, undefined, null => Always have space comp.
-// String, arrays, obkects ; => might change with respect to input size
+// String, arrays, objects ; => might change with respect to input size
 
 
 // O(n^2) Space Comp.

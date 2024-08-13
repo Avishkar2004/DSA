@@ -46,7 +46,6 @@ Eg 2:-
 
 
 
-
 For Search algorithm :-
 
 We can Find Element Position :-
@@ -91,7 +90,7 @@ function naiveSearchs(str, word) {
     return count
 }
 
-console.log(naiveSearch("search and find", "an"))
+console.log(naiveSearchs("search and find", "an"))
 output: [1]
 
 
