@@ -113,4 +113,3 @@ DNA sequencing: Kadane's algorithm can be used in bioinformatics to find the lon
 Machine learning: Kadane's algorithm can be used in some machine learning applications, such as reinforcement learning and dynamic programming, to find the optimal policy or action sequence that maximizes a reward function.
 
 Therefore, we can say the advantages of Kadane's Algorithm make it a great solution for solving the maximum subarray problem, especially for large datasets. However, its limitations must be considered when using it for specific applications.
-

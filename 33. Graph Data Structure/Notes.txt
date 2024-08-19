@@ -121,7 +121,7 @@ console.log(graph1);
 
 ==============
 
-Add Vertex in Graph :-
+Add Edges in Graph :-
 
 
 class Ghaph {
@@ -259,6 +259,14 @@ class Ghaph {
       this.revomeEdge(vertex, item);
     }
   }
+
+display() {
+    for (let vertex in this.data) {
+      console.log(`${vertex} -> ${this.data[vertex].join(", ")}`);
+    }
+    console.log("");
+  }
+
 }
 
 const graph1 = new Ghaph();
@@ -273,5 +281,8 @@ graph1.addEdge("B", "C");
 graph1.addEdge("B", "D");
 
 graph1.removeVertex("A");
+
+graph1.display()
+
 
 console.log(graph1);

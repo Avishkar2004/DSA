@@ -46,7 +46,6 @@ It is similar to an adjacency matrix representation of a directed graph except t
 
 5 photo
 
-
 In the above image, we can see that the adjacency matrix representation of the weighted directed graph is different from other representations. It is because, in this representation, the non-zero values are replaced by the actual weight assigned to the edges.
 
 Adjacency matrix is easier to implement and follow. An adjacency matrix can be used when the graph is dense and a number of edges are large.
@@ -80,4 +79,3 @@ Now, consider the weighted directed graph, and let's see the adjacency list repr
 In the case of a weighted directed graph, each node contains an extra field that is called the weight of the node.
 
 In an adjacency list, it is easy to add a vertex. Because of using the linked list, it also saves space.
-

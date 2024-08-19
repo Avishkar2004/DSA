@@ -14,7 +14,6 @@ Why companies are giving imp to dsa ?
 - problem solving ability
 - fundamental of software development
 
-
 Fundamental :- 
 -pattern printing
 why :- using nested loop

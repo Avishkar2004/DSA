@@ -122,7 +122,7 @@ for(let i = 0; i<data.length; i++) { // or data.length - 1
 if(data[i] ===search) {
   index = i
   break;
- }
+ } 
 }
 
 console.log(index)
@@ -215,8 +215,6 @@ Space complexity :- how much "memory" it is taking
 
 TIme Complexity :- No.of lines
 - vary on system processor, current program working on our system, depend on system, ram , bytes.
-
-
 
 
 8. ARRAY SORTING(Sorting) :-

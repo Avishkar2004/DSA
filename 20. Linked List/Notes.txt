@@ -409,7 +409,6 @@ console.log(list);
 Search Node in Linked List (based on value)
 
 
-
 class List {
   constructor(data) {
     this.head = {

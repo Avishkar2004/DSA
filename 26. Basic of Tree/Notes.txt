@@ -128,7 +128,6 @@ B-Tree and B+Tree are the tree data structures used to implement indexing in dat
 - Routing table:
 The tree data structure is also used to store the data in routing tables in the routers.
 
-
 * Types of Tree data structure :-
 The following are the types of a tree data structure:
 
@@ -190,7 +189,6 @@ The splay tree data structure is also binary search tree in which recently acces
 It might be a possibility that height of the splay tree is not balanced, i.e., height of both left and right subtrees may differ, but the operations in splay tree takes order of logN time where n is the number of nodes.
 
 Splay tree is a balanced tree but it cannot be considered as a height balanced tree because after each operation, rotation is performed which leads to a balanced tree.
-
 
 Treap :- 
 
