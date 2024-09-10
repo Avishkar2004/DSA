@@ -1,0 +1,17 @@
+**Bubble Sort** is a simple, comparison-based sorting algorithm. It works by repeatedly stepping through the list to be sorted, comparing each pair of adjacent items, and swapping them if they are in the wrong order. This process continues until no more swaps are needed, indicating that the list is sorted.
+
+### Key Points:
+
+- **Process**: The algorithm repeatedly compares adjacent elements and swaps them if they are in the wrong order, "bubbling" the largest unsorted element to its correct position in each pass through the list.
+
+- **Time Complexity**: 
+  - **Worst Case**: O(n²) — occurs when the list is in reverse order.
+  - **Best Case**: O(n) — occurs when the list is already sorted (with an optimized version that stops early if no swaps are needed).
+  
+- **Space Complexity**: O(1) — Bubble Sort is an in-place sorting algorithm, meaning it requires only a constant amount of additional memory space.
+
+- **Stability**: Bubble Sort is a stable sorting algorithm, meaning it maintains the relative order of equal elements.
+
+### Usage:
+
+Bubble Sort is easy to understand and implement but is not suitable for large datasets due to its inefficient time complexity. It is mainly used for educational purposes or for datasets that are small or nearly sorted.

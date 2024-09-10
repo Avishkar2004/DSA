@@ -207,8 +207,6 @@ class List {
     console.log("Valur not found in the list");
   }
 
-
-  
 }
 
 let list = new List(200);

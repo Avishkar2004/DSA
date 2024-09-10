@@ -30,152 +30,6 @@ peek :-  returns the element at the top of the stack
 isempty :- 
 print :- 
 
-
- push method :-
-
-This is our stack
-const data = [];
-let currentSize = data.length;
-let maxValue = 5;
-
-function push(newVal) {
-  data[currentSize] = newVal;
-  currentSize++
-}
-
-push(20);
-push(20);
-push(20);
-console.log(data);
-
-Output:- [ 20, 20, 20 ]
-
-Push :-
-
-const data = [];
-let currentSize = data.length;
-let maxValue = 5;
-
-function push(newVal) {
-  data[currentSize] = newVal;
-  currentSize += 1
-}
-
-push(20);
-push(20);
-push(20);
-push(20);
-push(20);
-push(20);
-console.log(data);
-
-Output :- [ 20, 20, 20, 20, 20, 20 ]
-
-Push With maximum Stack length :-
-
-const data = [];
-let currentSize = data.length;
-let maxValue = 5;
-
-function push(newVal) {
-  if (currentSize >= maxValue) {
-    alert("stack is full, you can't add" + newVal);
-  }
-
-  data[currentSize] = newVal;
-  currentSize += 1;
-}
-
-push(20);
-push(20);
-push(20);
-push(20);
-push(20);
-push(20);
-console.log(data);
-
-Output :- [20, 20, 20, 20, 20]
-Alert : stack is full, you can't add 20
-
-
-//Push And Pop :-
-
-const data = [];
-let currentSize = data.length;
-let maxValue = 5;
-
-function push(newVal) {
-  if (currentSize >= maxValue) {
-    alert("stack is full, you can't add" + newVal);
-  }
-
-  data[currentSize] = newVal;
-  currentSize += 1;
-}
-
-function pop() {
-  if (currentSize > 0) {
-    currentSize -= 1;
-    data.length = currentSize;
-  } else {
-    alert("stack is already empty");
-  }
-}
-
-push(20);
-push(21);
-push(20);
-push(2);
-pop();
-pop();
-pop();
-pop();
-pop();
-console.log(data);
-
-Output :- (1) [20]
-
-
-
-//array :-
-
-const data = [];
-let currentSize = data.length;
-let maxValue = 5;
-
-function push(newVal) {
-  if (currentSize >= maxValue) {
-    alert("stack is full, you can't add" + newVal);
-  }
-
-  data[currentSize] = newVal;
-  currentSize += 1;
-}
-
-function pop() {
-  if (currentSize > 0) {
-    currentSize -= 1;
-    data.length = currentSize;
-  } else {
-    alert("stack is already empty");
-  }
-}
-
-push(20);
-push(1);
-push(21);
-push(20);
-push(2);
-pop();
-pop();
-pop();
-pop();
-pop();
-pop()
-console.log(data);
-
-Alert : stack is already empty
-
 Notes :-
 
 - Stack in JavaScript is a data structure that follows the Last-In-First-Out (LIFO) principle. This means that the last element added to the stack will be the first one to be removed. The stack is a linear data structure that stores elements in a linear array.
@@ -256,18 +110,72 @@ You can use these operations to perform various operations on the stack. For exa
 
 Stack in Class :-
 
-class Avishkar {
-  //! why constructor :- jab bhi hum log class ko call karte hai tab sabse pahle constructor call hota hai
- item = []
- currentSize
- maxSize;
-  constructor() {
-    console.log("first")
-  }
-  push() {}
 
-  pop() {}
+class Stack {
+  item = [];
+  curSize;
+  maxSize;
+  constructor(size) {
+    this.mazSize = size;
+    this.curSize = this.item.length;
+  }
+
+  push(newVal) {
+    if (this.curSize >= this.maxSize) {
+      console.log("Stack is full");
+    } else {
+      this.item[this.curSize] = newVal;
+      this.curSize++;
+    }
+  }
+
+  pop() {
+    if (this.curSize > 0) {
+      this.curSize--;
+      this.item.length = this.curSize;
+    } else {
+      console.log("Stack is aleady empty");
+    }
+  }
+
+  display() {
+    console.log(this.item);
+  }
+
+  peek() {
+    if (this.curSize > 0) {
+      return this.item[this.curSize - 1];
+    } else {
+      return null;
+    }
+  }
+  isEmpty() {
+    if (this.curSize === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  getMin() {
+    let min = this.item[0];
+    for (let i = 1; i < this.curSize; i++) {
+      if (this.item[i] < min) {
+        min = this.item[i];
+      }
+    }
+    return min;
+  }
 }
 
-//!This is instance
-st1 = new Avishkar() //First
+let str1 = new Stack();
+
+str1.push(1);
+str1.push(2);
+str1.push(3);
+str1.push(4);
+// console.log(str1.peek());
+// console.log(str1.isEmpty());
+console.log(str1.getMin());
+
+str1.display();

@@ -69,7 +69,6 @@ if(!pos) {
 NOTES :-
 Searching algorithms are essential tools in computer science used to locate specific items within a collection of data. These algorithms are designed to efficiently navigate through data structures to find the desired information, making them fundamental in various applications such as databases, web search engines, and more.
 
-
 2.String Search :-
 
 - Loop Over the longer string.
@@ -100,7 +99,7 @@ output: [1]
 // the longest prefix of the substring str[0] has length
 // for the substrings the following substrings, we have two cases
 // case 1. the current character doesn't match the last character of the longest prefix
-// if that is the case, we have to backtrack, and try find a character  that will be equal to the current character
+// if that is the case, we have to backtrack, and try find a character that will be equal to the current character
 // if we reach 0, then we couldn't find a chracter
 // case 2. The last character of the longest prefix matches the current character in `str`
 // if that is the case, we know that the longest prefix at position i has one more character.
@@ -110,19 +109,16 @@ output: [1]
 // maxPrefix = will be 2 (the first `c` in `str`)
 // maxPrefix now will be 3
 // so the max prefix for table[9] is 3
+
+
 function makeTable(str) {
     var table = new Array(str.length);
     var maxPrefix = 0;
-    
     table[0] = 0;
-  
-    
     for (var i = 1; i < str.length; i++) {
       while (maxPrefix > 0 && str.charAt(i) !== str.charAt(maxPrefix)) {
-        
         maxPrefix = table[maxPrefix - 1];
       }
-      
       if (str.charAt(maxPrefix) === str.charAt(i)) {
         maxPrefix++;
       }

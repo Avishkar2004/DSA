@@ -113,7 +113,6 @@ while (i<data.length) {
   i++;
 }
 
-
 Output :-
 batman
 iron

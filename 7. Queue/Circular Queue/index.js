@@ -16,7 +16,7 @@ class Queue {
       }
       this.items[this.rear] = val;
       this.currentSize++;
-      if ((this.front == -1)) {
+      if (this.front == -1) {
         this.front = this.rear;
       }
     }
