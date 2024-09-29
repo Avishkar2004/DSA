@@ -26,7 +26,7 @@ class List {
     while (counter < this.size) {
       console.log(currentNode);
       currentNode = currentNode.next;
-      counter++;
+      counter++;t add
     }
   }
 }
